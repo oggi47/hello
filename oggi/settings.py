@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bootstrap_datepicker_plus',
     'django_countries',
-    
+    'herokuapp',
 ]
 
 MIDDLEWARE = [
@@ -137,11 +137,10 @@ STATIC_URL = '/static/'
 SENDGRID_API_KEY = os.getenv('SG.fMs4VMvWTFivD8UoYXDdBQ.I8d8pMunn9YNq')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'oggi_mail'EMAIL_HOST_PASSWORD = 'Vp7rockz#'
+EMAIL_HOST_USER = 'oggi_mail'
+EMAIL_HOST_PASSWORD = 'Vp7rockz#'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-SECRET_KEY = os.environ.get('SECRET_KEY', '*vz(s61pa(=)-lhnmcp2m6_grlo8o!6+0orc^6tbinffo@&&)o')  
-EMAIL_HOST_PASSWORD = os.environ.get('Vp7rockz#')

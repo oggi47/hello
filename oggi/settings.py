@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
@@ -25,8 +26,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','*vz(s61pa(=)-lhnmcp2m6_grlo8o!6
 SECRET_KEY = '*vz(s61pa(=)-lhnmcp2m6_grlo8o!6+0orc^6tbinffo@&&)o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['project-name.herokuapp.com','localhost', '127.0.0.1', '[::1]']
+
+ALLOWED_HOSTS = ['oggi47.herokuapp.com','localhost', '127.0.0.1', '[::1]']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -144,3 +145,4 @@ EMAIL_USE_TLS = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+django_heroku.settings(locals())

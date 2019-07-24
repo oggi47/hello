@@ -1,0 +1,559 @@
+	<h4 class="orange_header">Particulars of Proposer</h4>
+    
+   
+
+    <div class="row">
+	<div class="col-8"> Name of Proposer/Name of Company:   {{ form.name_of_proposer}}	</div>
+	<div class="col-4" >Business Registration No:{{form.business_registration_no}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-8">  Mailing Address:{{ form.mailing_adress}}	</div>
+	<div class="col-4">Postal Number:	{{form.postal_number}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Email:   {{ form.email}}	</div>
+	<div class="col-4">	Phone number: {{form.phone_Number}}	</div>	
+	</div>
+
+
+	<div class="row">
+	<div class="col-8"> No. of Years in Business:   {{ form.no_of_years_business}}	</div>
+	<div class="col-4">Period of Insurance:	{{form.period_of_insuarance}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-12">
+		Nature of Business: {{ form.nature_of_business}}
+	</div>
+	</div>
+
+	<div class="row">
+  	<div class="col-sm-4">Policy No. (WIC): {{ form.policy_no_WIC}}</div>
+ 	 <div class="col-sm-4">Policy No. (PL): 
+{{form.policy_no_PL}}</div>
+ 	 <div class="col-sm-4">Typeof insurance: {{ form.typeof_insuarance}}</div>
+	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Employees to be insured for Act Benefits and Common Law</h4>
+	<h5>All employees within the same category must be insured</h5>
+
+	
+ <table class="table table-bordered" id="Table_A">
+  <tr>
+    <th colspan="2" rowspan="2" >Category/Description of Occupations</th>
+    <th colspan="2">Employees involved in work on
+board vessels</th>
+    <th colspan="2">Employees NOT involved in work on
+board vessels</th>
+  </tr>
+  <tr>
+    <td scope="col">No. of Employees</td>
+    <td scope="col">Est. Annual
+Wages, salaries &
+other moneta</td>
+    <td scope="col">No. of Employees</td>
+    <td scope="col">Est. Annual
+Wages, salaries &
+other monetary
+earnings</td>
+  </tr>
+  <tr>
+    <td colspan="2">Accountants/Admin Managers</td>
+    <td scope="col"><{{form.admin_managers_board_vessels_no_employees}} ></td>
+    <td scope="col">< {{form.admin_managers_board_vessels_wages }} ></td>
+    <td scope="col"><{{form.admin_managers_board_vessels_no_employees_NOT}}></td>
+    <td scope="col"><{{form.admin_managers_board_vessels_wages_NOT }} ></td>
+  </tr>
+  <tr>
+    <td colspan="2">Accounts/Admin Personnel</td>
+    <td scope="col">{{form.admin_personal_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.admin_personal_board_vessels_wages }} ></td>
+    <td scope="col"><{{form.admin_personal_board_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.admin_personal_board_vessels_wages_NOT }} ></td>
+  </tr>
+  <tr>
+    <td colspan="2">Drivers, delivery personnel</td>
+   <td scope="col"><{{form.delivery_personal_board_vessels_no_employees}}></td>
+    <td scope="col"><{{form.delivery_personal_board_vessels_wages}} ></td>
+    <td scope="col"><{{form.delivery_personal_board_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.delivery_personal_board_vessels_wages_NOT }} ></td>
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Employees to be insured for Act Benefits and Common Law</h4>
+
+<table class="table table-bordered" id="Table_B">
+
+ 
+  <tr>
+    <th>Category/Description of Occupations</th>
+    <th colspan="2">Employees involved in work on
+board vessels</th>
+    <th colspan="2">Employees NOT involved in work on
+board vessels</th>
+  </tr>
+  <tr>
+    <td>Engineers</td>
+    <td scope="col"><{{form.engineers_board_vessels_no_employees}}></td>
+    <td scope="col"><{{form.engineers_board_vessels_wages}}></td>
+    <td scope="col"><{{form.engineers_board_vessels_no_employees_NOT}} ></td>
+   <td scope="col"><{{form.engineers_board_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>General Workers</td>
+    <td scope="col"><{{form.general_workers_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.general_workers_vessels_wages}} ></td>
+    <td scope="col"><{{form.general_workers_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.general_workers_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>General Workers(heavy engineering/hot-work)</td>
+    <td scope="col"><{{form.general_workersH_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.general_workersH_vessels_wages}} ></td>
+    <td scope="col"><{{form.general_workersH_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.general_workersH_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Management(CEO/MD/GM,etc)</td>
+    <td scope="col"><{{form.management_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.management_vessels_wages}} ></td>
+    <td scope="col"><{{form.management_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.management_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Operation Managers</td>
+    <td scope="col"><{{form.management_O_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.management_O_vessels_wages}} ></td>
+    <td scope="col"><{{form.management_O_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.management_O_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Operations Supervisors & Foremen</td>
+    <td scope="col"><{{form.operations_supervisor_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.operations_supervisor_vessels_wages}}></td>
+    <td scope="col"><{{form.operations_supervisor_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.operations_supervisor_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Sales/Marketing Managers</td>
+    <td scope="col"><{{form.sales_management_supervisor_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.sales_management_supervisor_vessels_wages}} ></td>
+    <td scope="col"><{{form.sales_management_supervisor_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.sales_management_supervisor_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Sales/Marketing personnel</td>
+    <td scope="col"><{{form.sales_personal_supervisor_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.sales_personal_supervisor_vessels_wages}} ></td>
+    <td scope="col"><{{form.sales_personal_supervisor_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.sales_personal_supervisor_vessels_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Technicians(heavy engineering/hot-work)</td>
+    <td scope="col"><{{form.technician_H_supervisor_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.technician_H_supervisor_vessels_wages}}></td>
+    <td scope="col"><{{form.technician_H_supervisor_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.technician_H_supervisor_vessels_wages_NOT}}></td>
+  </tr>
+  <tr>
+    <td>Technicians(light engineering)</td>
+    <td scope="col"><{{form.technician_L_supervisor_board_vessels_no_employees}} ></td>
+    <td scope="col"><{{form.technician_L_supervisor_vessels_wages}} ></td>
+    <td scope="col"><{{form.technician_L_supervisor_vessels_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.technician_L_supervisor_vessels_wages_NOT}} ></td>
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Employees to be insured for Common Law (Employer’s Liability) only</h4>
+	
+<table class="table table-bordered" id="Table_C">
+  <tr>
+    <th rowspan="2">Category/Description of Occupations</th>
+    <th colspan="2">Employees involved in work on
+board vessels</th>
+    <th colspan="2">Employees NOT involved in work on
+board vessels</th>
+  </tr>
+  <tr>
+    <td>No. of Employees</td>
+    <td>Est. Annual Wages, salaries & other monetary earnings</td>
+    <td>No. of Employees</td>
+    <td>Est. Annual Wages, salaries & other monetary earnings</td>
+  </tr>
+  <tr>
+    <td>Accountants/Admin Managers</td>
+     <td scope="col"><{{form.C_admin_managers_no_employees}} ></td>
+    <td scope="col"><{{form.C_admin_managers_wages}} ></td>
+    <td scope="col"><{{form.C_admin_managers_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_admin_managers_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Accounts/Admin Personne</td>
+     <td scope="col"><{{form.C_admin_personnel_no_employees}} ></td>
+    <td scope="col"><{{form.C_admin_personnel_wages}} ></td>
+    <td scope="col"><{{form.C_admin_personnel_no_employees_NOT}}></td>
+    <td scope="col"><{{form.C_admin_personnel_wages_NOT}}></td>
+  </tr>
+  <tr>
+    <td>Drivers, delivery personnel</td>
+     <td scope="col"><{{form.C_delivery_personnel_no_employees}}></td>
+    <td scope="col"><{{form.C_delivery_personnel_wages}} ></td>
+    <td scope="col"><{{form.C_delivery_personnel_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_delivery_personnel_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Engineers</td>
+     <td scope="col"><{{form.C_engineers_no_employees}} ></td>
+    <td scope="col"><{{form.C_engineers_wages}} ></td>
+    <td scope="col"><{{form.C_engineers_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_engineers_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>General Workers</td>
+     <td scope="col"><{{form.C_general_workers_no_employees}} ></td>
+    <td scope="col"><{{form.C_general_workers_wages}}></td>
+    <td scope="col"><{{form.C_general_workers_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_general_workers_wages_NOT}} ></td>
+  </tr>
+  <tr>
+  	<td>General Workers (heavy
+engineering/hot-work)</td>
+    <td scope="col"><{{form.C_general_workers_H_no_employees}} ></td>
+    <td scope="col"><{{form.C_general_workers_H_wages}} ></td>
+    <td scope="col"><{{form.C_general_workers_H_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_general_workers_H_wages_NOT}}></td>
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Employees to be insured for Common Law (Employer’s Liability) only</h4>
+
+<table  class="table table-bordered" id="Table_D">
+  <tr>
+    <th rowspan="2">Category/Description of Occupations</th>
+    <th colspan="2">Employees involved in work on
+board vessels</th>
+    <th colspan="2">Employees NOT involved in work on
+board vessels</th>
+  </tr>
+  <tr>
+    <td>No. of Employees</td>
+    <td>Est. Annual Wages, salaries & other monetary earnings</td>
+    <td>No. of Employees</td>
+    <td>Est. Annual Wages, salaries & other monetary earnings</td>
+  </tr>
+  <tr>
+    <td>Management (CEO/MD/GM, etc)</td>
+   <td scope="col"><input type="text" name="{working_injury_compensation.
+C_managers_CEO_no_employees}" ></td>
+    <td scope="col"><{{form.C_managers_CEO_wages}} ></td>
+    <td scope="col"><{{form.C_managers_CEO_no_employees_NOT}}></td>
+    <td scope="col"><{{working_injury_compensation.C_managers_CEO_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Operations Managers</td>
+    <td scope="col"><{{form.C_operation_managers_no_employees}} ></td>
+    <td scope="col"><{{form.C_operation_managers_wages}} ></td>
+    <td scope="col"><{{form.C_operation_managers_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_operation_managers_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Operations Supervisors & Foremen</td>
+    <td scope="col"><{{form.C_operation_supervisors_no_employees}} ></td>
+    <td scope="col"><{{form.C_operation_supervisors_wages}} ></td>
+    <td scope="col"><{{form.C_operation_supervisors_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_operation_supervisors_wages_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Sales/Marketing Managers</td>
+    <td scope="col"><{{form.C_sales_managers_no_employees}}></td>
+    <td scope="col"><{{form.C_sales_managers_wages}} ></td>
+    <td scope="col"><{{form.C_sales_managers_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_sales_managers_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Sales/Marketing personnel</td>
+    <td scope="col"><{{form.C_sales_personnel_no_employees}} ></td>
+    <td scope="col"><{{form.C_sales_personnel_wages}} ></td>
+    <td scope="col"><{{form.C_sales_personnel_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_sales_personnel_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Technicians (heavy engineering/hotwork)</td>
+    <td scope="col"><{{form.C_technicians_heavy_no_employees}} ></td>
+    <td scope="col"><{{form.C_technicians_heavy_wages}} ></td>
+    <td scope="col"><{{form.C_technicians_heavy_no_employees_NOT}}></td>
+    <td scope="col"><{{form.C_technicians_heavy_NOT}} ></td>
+  </tr>
+  <tr>
+    <td>Technicians (light engineering work)</td>
+    <td scope="col"><{{form.C_technicians_light_no_employees}}></td>
+    <td scope="col"><{{form.C_technicians_light_wages}} ></td>
+    <td scope="col"><{{form.C_technicians_light_no_employees_NOT}} ></td>
+    <td scope="col"><{{form.C_technicians_light_NOT}} ></td>
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Annual Turnover & Limits (for Public Liability Insurance only)</h4>
+
+<div class="row">
+  	<div class="col-sm-4">{{ form.marine_related_business |as_crispy_field}}</div>
+ 	 <div class="col-sm-4">{{ form.non_marine_related_business|as_crispy_field}}</div>
+ 	 <div class="col-sm-4">{{form.limit_of_liability|as_crispy_field}}</div>
+	</div>
+
+<br><br><br>
+<h4 class="orange_header">Claims Experience for the past 3 years</h4>
+<br>
+<h6>Work Injury Compensation/Employers’ Liability Insurance</h6>
+
+<table class="table table-bordered" id="Table_E">
+  <tr>
+    <th colspan="2">Period of Insurance</th>
+    <th rowspan="2">No. of Employees</th>
+    <th colspan="2">Paid Claims for period</th>
+    <th colspan="2">Outstanding Claims for
+period</th>
+  </tr>
+  <tr>
+    <td>From </td>
+    <td>To </td>
+    <td>No.</td>
+    <td>Amount</td>
+    <td>No.</td>
+    <td>Amount</td>
+  </tr>
+  <tr>
+    <td scope="col"><{{form.period_3_from_A_WIC}} ></td>
+    <td scope="col"><{{form.period_3_to_A_WIC}} ></td>
+    <td scope="col"><{{form.period_3_no_employees_A_WIC}}></td>
+    <td scope="col"><{{form.paid_claims_3_No_A_WIC}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_A_WIC}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_A_WIC}}></td>
+    <td scope="col"><{{form.outstanding_claims_3_Amount_A_WIC}} ></td>
+  </tr>
+  <tr>
+     <td scope="col"><{form.period_3_from_B_WIC}} ></td>
+       <td scope="col"><{{form.period_3_to_B_WIC} ></td>
+    <td scope="col"><{{form.period_3_no_employees_B_WIC}} ></td>
+    <td scope="col"><{{form.paid_claims_3_No_B_WIC}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_B_WIC}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_B_WIC}} ></td>
+     <td scope="col"><{{form.outstanding_claims_3_Amount_B_WIC}} ></td>
+  </tr>
+  <tr>
+     <td scope="col"><{{form.period_3_from_C_WIC}} ></td>
+    <td scope="col"><{{form.period_3_to_C_WIC}} ></td>
+    <td scope="col"><{{form.period_3_no_employees_C_WIC}} ></td>
+    <td scope="col"><{{form.paid_claims_3_No_C_WIC}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_C_WIC}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_C_WIC}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_Amount_C_WIC}} ></td>
+  </tr>
+</table>
+
+<br>
+<h6>Public Liability Insurance</h6>
+
+<table class="table table-bordered"  id="Table_F">
+  <tr>
+    <th colspan="2">Period of Insurance</th>
+    <th rowspan="2">No. of Employees</th>
+    <th colspan="2">Paid Claims for period</th>
+    <th colspan="2">Outstanding Claims for
+period</th>
+  </tr>
+  <tr>
+    <td >From </td>
+    <td>To </td>
+    <td>No.</td>
+    <td>Amount</td>
+    <td>No.</td>
+    <td>Amount</td>
+  </tr>
+  <tr>
+    <td scope="col"><{{form.period_3_from_A_public}} ></td>
+    <td scope="col"><{{form.period_3_to_A_public}} ></td>
+    <td scope="col"><{{form.period_3_no_employees_A_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_No_A_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_A_public}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_A_public}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_Amount_A_public}} ></td>
+  </tr>
+  <tr>
+     <td scope="col"><{{form.period_3_from_B_public}} ></td>
+       <td scope="col"><{{form.period_3_to_B_public}} ></td>
+    <td scope="col"><{{form.period_3_no_employees_B_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_No_B_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_B_public}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_B_public}} ></td>
+     <td scope="col"><{{form.outstanding_claims_3_Amount_B_public}} ></td>
+  </tr>
+  <tr>
+     <td scope="col"><{{form.period_3_from_C_public}} ></td>
+    <td scope="col"><{{form.period_3_to_C_public}} ></td>
+    <td scope="col"><{{form.period_3_no_employees_C_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_No_C_public}} ></td>
+    <td scope="col"><{{form.paid_claims_3_Amount_C_public}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_no_employees_C_public}} ></td>
+    <td scope="col"><{{form.outstanding_claims_3_Amount_C_public}}></td>
+  </tr>
+</table>
+
+
+
+<br><br><br>
+<h4 class="orange_header">Other Information relating to Work-on-Board Vessel Risks</h4>
+
+<div class="col-sm-10">What is the maximum no. of employees involved in work-on-board vessel any one time?<br>{{ form.max_no_employees }}</div>
+<div class="col-sm-10">Does the work involve welding work and/or hot-work?<br>{{ form.welding_hot_work_yesno }}</div>
+<h5>Do you expect any of your employees involve in any of the activities below? </h5>
+<h6>If Yes, please provide the following information:</h6>
+
+<table class="table table-bordered" id="Table_G">
+  <tr>
+      <td scope="col"></td>
+    <td scope="col">{{ form.work_on_board}}</td>
+    <td scope="col">{{ form.sail_vessel_contract}}</td>
+  </tr>
+  <tr>
+    <td>a) Maximum no. of employees working-on-board offshore oilrigs/platform each time</td>
+    <td scope="col">{{ form.max_no_employees_oilrigs}}</td>
+    <td scope="col">{{ form.max_no_employees_sailvessel}}</td>
+  </tr>
+  <tr>
+    <td>b) Average duration per trip</td>
+   <td scope="col">{{ form.average_duration_oilrigs}}</td>
+    <td scope="col">{{ form.average_duration_sailvessel}}</td>
+  </tr>
+  <tr>
+    <td>c) Location of offshore oil-rigs/platforms</td>
+  <td scope="col">{{ form.location_offshore_oilrigs}}</td>
+    <td scope="col">{{ form.location_offshore_sailvessel}}</td>
+  </tr>
+  <tr>
+    <td>d) Frequency of such trips per month</td>
+   <td scope="col">{{ form.frequency_oilrigs}}</td>
+    <td scope="col">{{ form.frequency_sailvessel}}</td>
+  </tr>
+</table>
+
+<br>
+<h6> Please indicate on Annex 1 attached the shipyards where your company carries out work. If the shipyard is
+not listed, please indicate below (use a separate sheet if space is inadequate)</h6>
+
+<div >{{ form.annex }}</div>
+
+<br>
+<h5>IMPORTANT NOTES:</h5>
+<h6> •The liability of the Company does not commence until this Proposal has been accepted by the Company.
+	<br><br>
+• Unless exempted, any employer who fails to insure himself in accordance with the Work Injury Compensation Act shall
+be guilty of an offence and shall be liable on conviction to a fine not exceeding S$10,000 or to imprisonment for a term
+not exceeding one year or to both.
+<br><br>
+• The Insured will be deemed to be his own insurer to the extent of the shortfall in the total number of employees and/or
+Total Annual Wages declared, and shall bear a ratable proportion of the liability accordingly.
+<br><br>
+• The information pertaining to Work Injury Comp</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

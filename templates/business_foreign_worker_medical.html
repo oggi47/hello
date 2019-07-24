@@ -1,0 +1,217 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bisform9.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Fengyuan Chen's Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <input id="datepicker">
+
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+  </script>
+
+</body>
+</html>
+
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<section id="foreign_worker_medical_background">
+<div id="foreign_worker_div2">
+
+<form actions="#" id="form" method="post" id="car_form">
+<a href="http://127.0.0.1:8000/business_oggi"><img id="close_wic" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+  <h4 class="orange_header">Particulars of Proposer/Company</h4>
+  {% csrf_token %}
+<div class="row">
+  <div class="col-8">    {{ foreign_worker_medical.name_of_proposer|as_crispy_field}} </div>
+  <div class="col-4"> {{foreign_worker_medical.business_registration_no|as_crispy_field}} </div>  
+</div>
+
+<div class="row">
+  <div class="col-8">    {{ foreign_worker_medical.mailing_adress|as_crispy_field}} </div>
+  <div class="col-4"> {{foreign_worker_medical.postal_number|as_crispy_field}}  </div>  
+</div>
+
+<div class="row">
+  <div class="col-8">    {{ foreign_worker_medical.email|as_crispy_field}}  </div>
+  <div class="col-4"> {{foreign_worker_medical.phone_Number|as_crispy_field}} </div>  
+</div>
+
+<div class="row">
+  <div class="col-8"> {{ foreign_worker_medical.no_of_years_business|as_crispy_field}}  </div>
+  <div class="col-2"> {{foreign_worker_medical.period_of_insuarance_from
+|as_crispy_field}}  </div>  
+  <div class="col-2"> {{foreign_worker_medical.period_of_insuarance_to|as_crispy_field}} </div>  
+</div>
+
+<br>
+<h4 class="orange_header">Selection of Plan</h4>
+
+<div class="row">
+  <div class="col-12" > {{ foreign_worker_medical.plan_x|as_crispy_field}}  </div>  
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{ foreign_worker_medical.annual_premium_foreign|as_crispy_field}}</div>
+  <div class="col-sm-4">{{ foreign_worker_medical.no_foreign|as_crispy_field}}</div>
+  <div class="col-sm-4">{{ foreign_worker_medical.total_annum_premium|as_crispy_field}}</div>
+</div>
+<br><br>
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name of Foreign Workers</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Work Permit No.</th>
+      <th scope="col">S Pass No./
+FIN No.</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{foreign_worker_medical.foreign_worker1 }}</th>
+      <td>{{foreign_worker_medical.gender1 }}</td>
+      <td>{{foreign_worker_medical.dob1 }}</td>
+      <td>{{foreign_worker_medical.work_permit1 }}</td>
+      <td>{{foreign_worker_medical.singpass1 }}</td>
+      
+    </tr>
+    <tr>
+       <th scope="row">{{foreign_worker_medical.foreign_worker2 }}</th>
+      <td>{{foreign_worker_medical.gender2 }}</td>
+      <td>{{foreign_worker_medical.dob2 }}</td>
+      <td>{{foreign_worker_medical.work_permit2 }}</td>
+      <td>{{foreign_worker_medical.singpass2 }}</td>
+    </tr>
+    <tr>
+       <th scope="row">{{foreign_worker_medical.foreign_worker3 }}</th>
+      <td>{{foreign_worker_medical.gender3 }}</td>
+      <td>{{foreign_worker_medical.dob3 }}</td>
+      <td>{{foreign_worker_medical.work_permit3 }}</td>
+      <td>{{foreign_worker_medical.singpass3 }}</td>
+    </tr>
+    <tr>
+       <th scope="row">{{foreign_worker_medical.foreign_worker4 }}</th>
+      <td>{{foreign_worker_medical.gender4 }}</td>
+      <td>{{foreign_worker_medical.dob4 }}</td>
+      <td>{{foreign_worker_medical.work_permit4 }}</td>
+      <td>{{foreign_worker_medical.singpass4 }}</td>
+    </tr>
+    <tr>
+       <th scope="row">{{foreign_worker_medical.foreign_worker5 }}</th>
+      <td>{{foreign_worker_medical.gender5}}</td>
+      <td>{{foreign_worker_medical.dob5 }}</td>
+      <td>{{foreign_worker_medical.work_permit5 }}</td>
+      <td>{{foreign_worker_medical.singpass5 }}</td>
+    </tr>
+    <tr>
+       <th scope="row">{{foreign_worker_medical.foreign_worker6 }}</th>
+      <td>{{foreign_worker_medical.gender6 }}</td>
+      <td>{{foreign_worker_medical.dob6 }}</td>
+      <td>{{foreign_worker_medical.work_permit6 }}</td>
+      <td>{{foreign_worker_medical.singpass6 }}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{foreign_worker_medical.foreign_worker7 }}</th>
+      <td>{{foreign_worker_medical.gender7}}</td>
+      <td>{{foreign_worker_medical.dob7 }}</td>
+      <td>{{foreign_worker_medical.work_permit7}}</td>
+      <td>{{foreign_worker_medical.singpass7 }}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{foreign_worker_medical.foreign_worker8 }}</th>
+      <td>{{foreign_worker_medical.gender8 }}</td>
+      <td>{{foreign_worker_medical.dob8 }}</td>
+      <td>{{foreign_worker_medical.work_permit8 }}</td>
+      <td>{{foreign_worker_medical.singpass8 }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</form>
+<div class="form-actions">
+      <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+ </div>
+</div>
+</section>
+  
+</body>
+</html>
+<style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  #form
+  {
+    font-family: 'Source Sans Pro', sans-serif;
+
+  }
+  #foreign_worker_div2
+  {
+
+  background-color:#fff;
+  padding:10%;
+  width:80%;
+  position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;
+  }
+
+  input[type=text] {
+  width: 100%; 
+ 
+ 
+}
+.orange_header
+{
+  color:#fe6a00;
+}
+section{
+  width:100%;
+  height:100vh;
+}
+#foreign_worker_medical_background
+{
+  background-color: #a7dfb8 ;
+
+}
+#close_wic
+{
+  width:3.5%;
+  float:right;
+}
+#submit_button
+{
+  width:20%;
+  margin-top:10%;
+}
+</style>

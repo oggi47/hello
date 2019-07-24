@@ -1,0 +1,213 @@
+	<h4 class="orange_header">Particulars of Proposer/Company</h4>
+	{% csrf_token %}
+<div class="row">
+	<div class="col-8">Name of Proposer/Name of Company: 
+    {{ form.name_of_proposer}}
+	</div>
+	<div class="col-4">NRIC/FIN No.: 
+	{{form.NRIC}}
+	</div>	
+</div>
+<div class="row">
+	<div class="col-sm-4">Business Registration No:
+	{{form.business_registration_no}}
+	</div>
+	<div class="col-sm-4">Occupation:
+	{{form.occupation}}
+	</div>
+	<div class="col-sm-4">Nature of Business: 
+	{{form.nature_of_business}}
+	</div>
+</div>
+<div class="row">
+  <div class="col-sm-8">Mailing Address: {{form.mailing_adress}}</div>
+
+  <div class="col-sm-4">Postal Number:  {{form.postal_number}}</div>
+</div>
+
+   
+<div class="row">
+  <div class="col-sm-3">Contact Number: {{form.contact_number}}</div>
+  <div class="col-sm-6">Date of Birth: {{form.dob}}</div>
+  <div class="col-sm-3">Gender: {{form.gender}}</div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-8">Email: {{form.email}}</div>
+  <div class="col-sm-4">Nationality: {{form.nationality}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8">Period of Insurance: {{form.period_of_insuarance}}</div>
+  <div class="col-sm-4">Years of Driving Experience: {{form.years_of_driving_exp}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Marital Status :{{form.marital_status}}</div>
+  <div class="col-sm-8">How often do you drive to West Malaysia: {{form.west_malaysia}}</div>
+</div>
+
+<br>
+<h4 class="orange_header">Particulars of Additional Driver(s)</h4>
+
+ 
+ <table class="table table-bordered">
+ <tr>
+    <th>Name of Driver(s) </th>
+    <th>NRIC/FIN No.</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Relationship to the Proposer</th>
+    <th>Any Claims in past 2 years</th>
+    <th>Years of Driving Experience</th>
+    <th>Occupation</th>
+  </tr>
+  <tr>
+  	  
+    <td scope="col">{{form.name_driver_1}}</td>
+    <td scope="col">{{form.NRIC_driver_1}}</td>
+    <td scope="col">{{form.DOB_driver_1}}</td>
+    <td scope="col">{{form.gender_driver_1}}</td>
+    <td scope="col">{{form.rs_to_proposer_driver_1}}</td>
+    <td scope="col">{{form.claims_2_driver_1}}</td>
+    <td scope="col">{{form.date_of_loss_1}}</td>
+    <td scope="col">{{form.years_exp_driver_1}}</td>
+  </tr>
+  <tr>
+     <td scope="col">{{form.name_driver_2}}</td>
+    <td scope="col">{{form.NRIC_driver_2}}</td>
+    <td scope="col">{{form.DOB_driver_2}}</td>
+    <td scope="col">{{form.gender_driver_2}}</td>
+    <td scope="col">{{form.rs_to_proposer_driver_2}}</td>
+    <td scope="col">{{form.claims_2_driver_2}"</td>
+    <td scope="col">{{form.date_of_loss_2}}</td>
+    <td scope="col">{{form.years_exp_driver_2}}</td>
+  </tr>
+  <tr>
+     <td scope="col">{{form.name_driver_3}}</td>
+    <td scope="col">{{form.NRIC_driver_3}}</td>
+    <td scope="col">{{form.DOB_driver_3}}</td>
+    <td scope="col">{{form.gender_driver_3}}</td>
+    <td scope="col">{{form.rs_to_proposer_driver_3}}</td>
+    <td scope="col">{{form.claims_2_driver_3}}</td>
+    <td scope="col">{{form.date_of_loss_3}}</td>
+    <td scope="col">{{form.years_exp_driver_3}}</td>
+  </tr>
+  <tr>
+    <td scope="col">{{form.name_driver_4}}</td>
+    <td scope="col">{{form.NRIC_driver_4}}</td>
+    <td scope="col">{{form.DOB_driver_4}}</td>
+    <td scope="col">{{form.gender_driver_4}}</td>
+    <td scope="col">{{form.rs_to_proposer_driver_4}}</td>
+    <td scope="col">{{form.claims_2_driver_4}}</td>
+    <td scope="col">{{form.date_of_loss_4}}</td>
+    <td scope="col">{{form.years_exp_driver_4}}</td>
+  </tr>
+  <tr>
+     <td scope="col">{{form.name_driver_5}}</td>
+    <td scope="col">{{form.NRIC_driver_5}}</td>
+    <td scope="col">{{form.DOB_driver_5}}</td>
+    <td scope="col">{{form.gender_driver_5}}</td>
+    <td scope="col">{{form.rs_to_proposer_driver_5}}</td>
+    <td scope="col">{{form.claims_2_driver_5}}</td>
+    <td scope="col">{{form.date_of_loss_5}}</td>
+    <td scope="col">{{form.years_exp_driver_5}}</td>
+  </tr>
+</table>
+
+
+<br>
+<h4 class="orange_header">Details of Claims</h4>
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Total Claim Amount</th>
+      <th scope="col">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{form.detail_date_1}}</th>
+      <td scope="col">{{form.detail_claim_amt_1}}</td>
+    <td scope="col">{{form.detail_description_1}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{form.detail_date_2}</th>
+      <td scope="col">{{form.detail_claim_amt_2}}</td>
+    <td scope="col">{{form.detail_description_2}}</td>
+    </tr>    
+  </tbody>
+</table>
+</div>
+<div>Name of Proposer/Name of Company:
+{{form.name_of_proposer2}}<br></div>
+
+
+<h4 class="orange_header">Details of Vehicle</h4>
+<div class="row">
+  <div class="col-sm-4">Brand new vehicle: {{form.brand_new_vehicle}}</div>
+  <div class="col-sm-4">Off peak car: {{form.off_peak_car}}</div>
+  <div class="col-sm-4">Registration Number: {{form.registration_number}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Make and Model: {{form.make_n_model}}</div>
+  <div class="col-sm-4">Engine Capacity: {{form.engine_capacity}}</div>
+  <div class="col-sm-4">Type of Body: {{form.type_of_body}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Chasis No: {{form.chasis_no}}</div>
+  <div class="col-sm-4">Engine No: {{form.engine_no}}</div>
+  <div class="col-sm-4">Year of Manufacture/ Year of Registration: {{form.year_of_manufacture}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Parallel Import: {{form.parallel_import}}</div>
+  <div class="col-sm-4">Turbo Engine: {{form.turbo_engine}}</div>
+  <div class="col-sm-4">Usage of vehicle: {{form.usage_of_vehicle}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Estimated Market Value:  {{form.estimated_market_val}}</div>
+  <div class="col-sm-4">Name of Finance Company: {{form.finance_co}}</div>
+  <div class="col-sm-4">No. of Seats: {{form.no_of_seats}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">No-Claim Discount (NCD): {{form.no_claim_discount}}</div>
+  <div class="col-sm-4">Offence Free Discount (OFD): {{form.offence_free_discount}}</div>
+  <div class="col-sm-4">NCD Protector: {{form.ncd_protector}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">no
+Current Vehicle for NCD Transfer: {{form.current_vehicle_ncd_transfer}}</div>
+  <div class="col-sm-4">Current Insurance Company: {{form.current_insurance_company}}</div>
+  <div class="col-sm-4">Date of Current Policy Expiry/Cancelation: {{form.date_of_current_policy}}</div>
+</div>
+
+<div class="row">
+  <div  class="col-sm-4">If NCD is “NIL”, please provide reasons: {{form.ncd_nil}}</div>
+  <div class="col-sm-8">Any Modification/Accessories: {{form.modification_accessories}}</div>
+ </div>
+
+<h4 class="orange_header">Other Information</h4>
+<div class="row">
+  <div >Been given demerit points for traffic offences?<br>{{form.demerit_points}}<br></div>
+<br>
+  <div>Have you suffered from defective vision or hearing, heart condition,epilepsy, diabetes or any physical or mental disability or infirmity that could impair the ability to drive?<br>{{form.defective_vision}}<br></div>
+  <br>
+  <div>Been refused motor insurance at any time or subjected to special conditions?<br>{{form.refused_motor}}<br></div>
+  <br>
+  <div>Do you have any insurance terminated in the last 12 months due to breach of any premium payment conditions?<br>{{form.insuarance_termination}}<br></div>
+  <br>
+  <div>Have you ever had been identified as unfit to drive in any Medical Examination for Driving License in the past?<br>{{form.medical_examination}}<br></div>
+  <br>
+  <div>
+If any of the above answers are “Yes”, please provide details:
+<br>{{form.yes_apply}}<br></div>
+  <br>
+ </div>

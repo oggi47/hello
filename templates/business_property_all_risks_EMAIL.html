@@ -1,0 +1,200 @@
+<div class="row">
+	<div class="col-8"> Name of Proposer/Name of Company:   {{  form.name_of_proposer}}	</div>
+	<div class="col-4">Business Registration No:	{{ form.business_registration_no}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Mailing Address:   {{  form.mailing_adress}}	</div>
+	<div class="col-4">	Postal Number: {{ form.postal_number}}	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Email:   {{  form.email}}	</div>
+	<div class="col-4">Phone number: 	{{ form.phone_Number}}	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Period of Insurance:   {{  form.period_of_insuarance}}	</div>
+	<div class="col-4">No. of Years in Business:	{{ form.no_of_years_business}}	</div>
+	</div>
+	<div>Mortgagee (if any):	{{ form.mortgagee}}</div>
+	<div>	Nature of Business: {{ form.nature_of_business}}</div>
+	<br><br><br>
+	<h4 class="orange_header">Details of Risk Premises</h4>
+	<div class="row">
+	<div class="col-8">Address:    {{  form.risk_adress}}	</div>
+	<div class="col-4">	Postal Number{{ form.risk_postal_number}}	</div>
+	</div>
+	<br>
+
+	<div class="row">
+	
+	<div class="col-3">	Use of Premises: {{ form.use_of_premise_qns1}}</div>
+	<div class="col-3">	a) Walls: {{ form.use_of_premise_qns2A}}</div>
+	<div class="col-3">b) Roof:	{{ form.use_of_premise_qns2B}}</div>
+	<div class="col-3">c) Building Frame:	{{ form.use_of_premise_qns2C}}</div>
+	</div>
+
+	<div class="row">
+	<h4 class="orange_header">Fire Fighting Appliances</h4>
+	</div>
+
+	<div class="row">
+	<div class="col-4"> 1) Fire Alarm:   {{  form.fire_alarm_yesno}}	</div>
+	<div class="col-8">	If Yes,where is the fire alarm connected to?: {{ form.fire_alarm}}	</div>
+	</div>
+	
+	
+	
+	<div class="row">
+	<div class="col-4">2) Fire Extinguisher:    {{ form.fire_fighting_appliance_2A}}	</div>
+	<div class="col-8">	No:{{form.fire_fighting_appliance_2B}}	</div>
+	</div>
+
+	
+	<div >3) Heat Detector:  {{  form.fire_fighting_appliance_3}}	</div>
+	<div>4) Hose Reels: 	{{ form.fire_fighting_appliance_4}}	</div>
+	
+	<div class="row">
+	<div class="col-4"> 5) In-House Fire Brigade:   {{  form.fire_fighting_appliance_5A}}	</div>
+	<div class="col-8">	If Yes, are they trained and no. of person in the team?:<br>{{form.fire_fighting_appliance_5B}}	</div>
+	</div>
+	<div > 6) Smoke Detector: {{ form.fire_fighting_appliance_6}}	</div>
+	<div> 7) Sprinkle:{{form.fire_fighting_appliance_7}}	</div>
+	
+	<div>8) Yard Hydrant:{{ form.fire_fighting_appliance_8}}	</div>
+	
+	<div>9) Protection other than the above:{{ form.fire_fighting_appliance_9}}	</div>
+	
+
+	<h4 class="orange_header">Security Systems of Premises</h4>
+	<div>1) 24-hours Watchman Services:	{{ form.security_system_1}}	</div>
+	
+	<div>2) Burglar Alarm System:	{{ form.security_system_2A}}	</div>
+	<div class="row">
+	<div class="col-4"> Name of Brand:   {{ form.security_system_2B}}	</div>
+	<div class="col-8">
+Is it connected to a central monitoring station?	{{ form.security_system_2C}}	</div>
+	</div>
+
+
+	<div>	3) Grilled Doors: {{form.security_system_3}}	</div>
+	<div>	4) Security Checkpoint: {{ form.security_system_4}}	</div>	
+	<div>	5) Surveillance Camera: {{ form.security_system_5}}	</div>
+	<div>	6) Others, please specify:{{ form.security_system_6}}	</div>
+
+	<h4 class="orange_header">Property to be Insured</h4>
+	<div class="row">
+	<div class="col-8">    Interests	</div>
+	<div class="col-4">	Sum Insured	</div>
+	</div>
+
+
+	<div>Building/Improvement Cost:	{{ form.property_to_b_insured_1}}	</div>
+	<div>Furniture, Fixtures & Fittings:	{{form.property_to_b_insured_2}}	</div>
+	<div>Office & Business Equipments:	{{form.property_to_b_insured_3}}	</div>
+
+	<div class="row">
+	<div class="col-8"> Stocks & Materials Consisting of:  {{ form.property_to_b_insured_4A}}		</div>
+	<div class="col-4">	{{ form.property_to_b_insured_4B}}		</div>
+	</div>
+
+	<div>	Plant & Machinery:{{ form.property_to_b_insured_5}}	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Property to be Insured</h4>
+	<div class="row">
+	<div class="col-8">    Interests	</div>
+	<div class="col-4">	Sum Insured	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Loss of Rent:  {{ form.property_to_b_insured_6A}}		</div>
+	<div class="col-4">	Sum Insured: {{form.property_to_b_insured_6B}}		</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8"> Others, please specify:  {{ form.property_to_b_insured_7A}}		</div>
+	<div class="col-4">	Sum Insured: {{ form.property_to_b_insured_7B}}		</div>
+	</div>
+	<div>	Total Sum Insured: {{ form.property_to_b_insured_7C}}	</div>
+	<br><br>
+	<h4 class="orange_header">Cover Required</h4>
+
+	<h6>Please provide full details of all losses for the last 5 years:</h6>
+	<table  class="table table-bordered">
+  <tr>
+    <th>Date of Loss</th>
+    <th>Nature of Loss</th>
+    <th>Amount Claimed</th>
+  </tr>
+  <tr>
+    <td>{{ form.claim_exp_dol_1}}</td>
+    <td>{{ form.claim_exp_nol_1}}</td>
+    <td>{{ form.claim_exp_amt_1}}</td>
+  </tr>
+  <tr>
+    <td>{{form.claim_exp_dol_2}}</td>
+    <td>{{form.claim_exp_nol_2}}</td>
+    <td>{{form.claim_exp_amt_2}}</td>
+  </tr>
+  <tr>
+    <td>{{ form.claim_exp_dol_3}}</td>
+    <td>{{ form.claim_exp_nol_3}}</td>
+    <td>{{ form.claim_exp_amt_3}}</td>
+  </tr>
+  <tr>
+   <td>{{ form.claim_exp_dol_4}}</td>
+    <td>{{ form.claim_exp_nol_4}}</td>
+    <td>{{form.claim_exp_amt_4}}</td>
+  </tr>
+  <tr>
+    <td>{{form.claim_exp_dol_5}}</td>
+    <td>{{ form.claim_exp_nol_5}}</td>
+    <td>{{ form.claim_exp_amt_5}}</td>
+  </tr>
+</table>
+<br><br>
+<h4 class="orange_header">Other Information</h4>
+
+<div class="row">
+	<div class="col-4"> 1) Are there any hazardous goods stored in the premises?<br>  {{ form.other_info_1A}}		</div>
+	<div class="col-8">If Yes, please state the types of hazardous goods:<br>	{{form.other_info_1B}}		</div>
+	</div>	
+<div class="row">
+	<div class="col-4"> 2) Is the Premises shared with others?<br>  {{ form.other_info_2A}}		</div>
+	<div class="col-8">	If Yes, please state its Nature of Business:<br>{{ form.other_info_2B}}		</div>
+	</div>	
+
+<div class="row">
+	<div class="col-4">  3) Does the building adjoin any other premises?<br> {{form.other_info_3A}}		</div>
+	<div class="col-8">If Yes, please state its Nature of Business:<br>	{{ form.other_info_3B}}		</div>
+	</div>	
+
+<div>4) Is there any insurance on the same property in force for the same period of insurance being proposed?<br>	{{form.other_info_4A}}	</div>
+<div class="row">
+	<div class="col-4"> Name of Insurer:  {{ form.other_info_4B}}		</div>
+	<div class="col-8">	Sum Insured: {{ form.other_info_4C}}</div>
+	</div>	
+
+<div>5) Has any Insurance Company ever refused your Fire/All Risks Insurance Proposal or refused to renew your Fire/All Risks Policy?<br>	{{ form.other_info_5}}	</div>
+<div>6) Has your insurance been canceled solely or in part due to a breach of premium payment warranty in the last 12 months?<br>	{{ form.other_info_6}}	</div>
+
+
+<h4 class="orange_header">Details of Expiring Insurance</h4>
+<div class="row">
+	<div class="col-8"> Name of Insurer:  {{ form.name_of_insurer}}		</div>
+	<div class="col-4">	Sum Insured:{{ form.sum_insured}}		</div>
+	</div>	
+
+<div class="row">
+	<div class="col-4"> Annual Premium:  {{ form.annual_premium}}		</div>
+	<div class="col-4">	Date of Expiry:{{ form.date_of_expiry}}		</div>
+	<div class="col-4">	Excess:{{ form.excess}}		</div>
+	</div>	
+
+<div>	Special Terms and Conditions:{{form.special_terms_conditions}}	</div>
+
+
+   
+  

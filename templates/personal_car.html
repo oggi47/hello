@@ -1,0 +1,293 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html>
+<head>
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+</head>
+<body >
+<section id="personal_car_background">
+<div id="car_div2">
+
+<form actions="#" id="form" method="post" >
+<a href="http://127.0.0.1:8000/personal"><img id="close_wic" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+	<h4 class="orange_header">Particulars of Proposer/Company</h4>
+	{% csrf_token %}
+<div class="row">
+	<div class="col-8">
+    {{ car_form.name_of_proposer|as_crispy_field}}
+	</div>
+	<div class="col-4">
+	{{car_form.NRIC|as_crispy_field}}
+	</div>	
+</div>
+<div class="row">
+	<div class="col-sm-4">
+	{{car_form.business_registration_no|as_crispy_field}}
+	</div>
+	<div class="col-sm-4">
+	{{car_form.occupation|as_crispy_field}}
+	</div>
+	<div class="col-sm-4">
+	{{car_form.nature_of_business|as_crispy_field}}
+	</div>
+</div>
+<div class="row">
+  <div class="col-sm-8">{{car_form.mailing_adress|as_crispy_field}}</div>
+
+  <div class="col-sm-4"> {{car_form.postal_number|as_crispy_field}}</div>
+</div>
+
+   
+<div class="row">
+  <div class="col-sm-3">{{car_form.contact_number|as_crispy_field}}</div>
+  <div class="col-sm-6">{{car_form.dob|as_crispy_field}}</div>
+  <div class="col-sm-3">{{car_form.gender|as_crispy_field}}</div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-8">{{car_form.email|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.nationality|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8">{{car_form.period_of_insuarance|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.years_of_driving_exp|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.marital_status|as_crispy_field}}</div>
+  <div class="col-sm-8">{{car_form.west_malaysia|as_crispy_field}}</div>
+</div>
+
+<br>
+<h4 class="orange_header">Particulars of Additional Driver(s)</h4>
+
+ 
+ <table class="table table-bordered">
+ <tr>
+    <th>Name of Driver(s) </th>
+    <th>NRIC/FIN No.</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Relationship to the Proposer</th>
+    <th>Any Claims in past 2 years</th>
+    <th>Years of Driving Experience</th>
+    <th>Occupation</th>
+  </tr>
+  <tr>
+  	  
+    <td scope="col"><input type="text" name="{car_form.name_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.NRIC_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.DOB_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.gender_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.rs_to_proposer_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.claims_2_driver_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.date_of_loss_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.years_exp_driver_1}"></td>
+  </tr>
+  <tr>
+     <td scope="col"><input type="text" name="{car_form.name_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.NRIC_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.DOB_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.gender_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.rs_to_proposer_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.claims_2_driver_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.date_of_loss_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.years_exp_driver_2}"></td>
+  </tr>
+  <tr>
+     <td scope="col"><input type="text" name="{car_form.name_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.NRIC_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.DOB_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.gender_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.rs_to_proposer_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.claims_2_driver_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.date_of_loss_3}"></td>
+    <td scope="col"><input type="text" name="{car_form.years_exp_driver_3}"></td>
+  </tr>
+  <tr>
+    <td scope="col"><input type="text" name="{car_form.name_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.NRIC_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.DOB_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.gender_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.rs_to_proposer_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.claims_2_driver_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.date_of_loss_4}"></td>
+    <td scope="col"><input type="text" name="{car_form.years_exp_driver_4}"></td>
+  </tr>
+  <tr>
+     <td scope="col"><input type="text" name="{car_form.name_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.NRIC_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.DOB_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.gender_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.rs_to_proposer_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.claims_2_driver_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.date_of_loss_5}"></td>
+    <td scope="col"><input type="text" name="{car_form.years_exp_driver_5}"></td>
+  </tr>
+</table>
+
+
+<br>
+<h4 class="orange_header">Details of Claims</h4>
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Total Claim Amount</th>
+      <th scope="col">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><input type="text" name="{car_form.detail_date_1}"></th>
+      <td scope="col"><input type="text" name="{car_form.detail_claim_amt_1}"></td>
+    <td scope="col"><input type="text" name="{car_form.detail_description_1}"></td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="text" name="{car_form.detail_date_2}"></th>
+      <td scope="col"><input type="text" name="{car_form.detail_claim_amt_2}"></td>
+    <td scope="col"><input type="text" name="{car_form.detail_description_2}"></td>
+    </tr>    
+  </tbody>
+</table>
+</div>
+{{car_form.name_of_proposer2|as_crispy_field}}
+
+
+<h4 class="orange_header">Details of Vehicle</h4>
+<div class="row">
+  <div class="col-sm-4">{{car_form.brand_new_vehicle|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.off_peak_car|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.registration_number|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.make_n_model|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.engine_capacity|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.type_of_body|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.chasis_no|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.engine_no|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.year_of_manufacture|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.parallel_import|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.turbo_engine|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.usage_of_vehicle|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.estimated_market_val|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.finance_co|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.no_of_seats|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.no_claim_discount|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.offence_free_discount|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.ncd_protector|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">{{car_form.current_vehicle_ncd_transfer|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.current_insurance_company|as_crispy_field}}</div>
+  <div class="col-sm-4">{{car_form.date_of_current_policy|as_crispy_field}}</div>
+</div>
+
+<div class="row">
+  <div  class="col-sm-4">{{car_form.ncd_nil|as_crispy_field}}</div>
+  <div class="col-sm-8">{{car_form.modification_accessories|as_crispy_field}}</div>
+ </div>
+
+<h4 class="orange_header">Other Information</h4>
+<div class="row">
+  <div >{{car_form.demerit_points|as_crispy_field}}</div>
+<br>
+  <div >{{car_form.defective_vision|as_crispy_field}}</div>
+  <br>
+  <div >{{car_form.refused_motor|as_crispy_field}}</div>
+  <br>
+  <div >{{car_form.insuarance_termination|as_crispy_field}}</div>
+  <br>
+  <div >{{car_form.medical_examination|as_crispy_field}}</div>
+  <br>
+  <div >{{car_form.yes_apply|as_crispy_field}}</div>
+  <br>
+ </div>
+
+<div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+    </div>
+
+</form>
+</div>
+
+</section>
+	
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+
+	}
+	#car_div2
+  {
+    background-color:#fff;
+  padding:10%;
+  width:90%;
+  position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;
+  }
+
+  input[type=text] {
+  width: 100%; 
+}
+section
+{
+  width:100%;
+  height:100vh;
+}
+#personal_car_background{
+  background-color:#a7dfb8 ;
+
+}
+#close_wic
+{
+  width:3.5%;
+  float:right;
+}
+#submit_button
+{
+  width:20%;
+  margin-top:10%;
+}
+.orange_header
+{
+  color:#fe6a00;
+}
+
+</style>

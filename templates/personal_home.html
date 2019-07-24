@@ -1,0 +1,144 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html>
+<head>
+		
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+</head>
+<body >
+<section id="personal_home_background" >
+<div id="home_div">
+<!-- Contact Us Form -->
+<a href="http://127.0.0.1:8000/personal"><img id="close_wic" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+<form action="#" id="form" method="post" name="form">
+	<h4 class="orange_header">Particulars of Proposer</h4>
+	{% csrf_token %}
+	<div class="row">
+	<div class="col-8">
+    {{ home_form.name_of_proposer|as_crispy_field}}
+	</div>
+	<div class="col-4">
+	{{home_form.NRIC|as_crispy_field}}
+	</div>	
+</div>
+
+	<div class="row">
+	<div class="col-8">
+    {{ home_form.mailing_adress|as_crispy_field}}
+	</div>
+	<div class="col-4">
+	{{home_form.postal_number|as_crispy_field}}
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-sm-4">
+	 {{ home_form.dob|as_crispy_field}}
+	</div>
+	<div class="col-sm-4">
+	 {{ home_form.contact_number|as_crispy_field}}
+	</div>
+	<div class="col-sm-4">
+	 {{ home_form.occupation|as_crispy_field}}
+	</div>
+</div>
+
+<div class="col-sm-12" > {{ home_form.email|as_crispy_field}}</div>
+
+   
+
+<br><br><br>
+<h4 class="orange_header">  Details of Premises </h4>
+
+<div class="row">
+	<div class="col-8">
+    {{ home_form.address_to_be_insured|as_crispy_field}}
+	</div>
+	<div class="col-4">
+	{{home_form.postal_code_to_be_insured|as_crispy_field}}
+	</div>	
+</div>
+<div class="col-sm-12" > {{ home_form.type_of_premise|as_crispy_field}}</div>
+
+<div class="row">
+	<div class="col-8">
+    {{ home_form.mortgagee|as_crispy_field}}
+	</div>
+	<div class="col-4">
+	{{home_form.name_of_landlord|as_crispy_field}}
+	</div>	
+</div>
+
+<div class="col-sm-12" > {{ home_form.is_the_premise|as_crispy_field}}</div>
+
+
+<div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button">
+    </div>
+  
+
+</form>
+</div>
+</section>	
+	
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+
+	}
+
+	#home_div
+  {
+    background-color:#fff;
+  padding:10%;
+  width:90%;
+  position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;
+  }
+
+  input[type=text] {
+  width: 100%; 
+}
+section
+{
+  width:100%;
+  height:100vh;
+}
+#personal_home_background{
+  background-color:#a7dfb8 ;
+
+}
+#close_wic
+{
+  width:3.5%;
+  float:right;
+}
+#submit_button
+{
+  width:20%;
+  margin-top:10%;
+}
+.orange_header
+{
+  color:#fe6a00;
+}
+</style>

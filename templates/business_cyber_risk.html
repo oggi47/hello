@@ -1,0 +1,37 @@
+{%load static%}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bisform4.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<section id="cyber_risk_background">
+
+<div id="cyber_risk_div">
+
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+
+	<a href="http://127.0.0.1:8000/business_oggi"><img id="close_dao" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+	{% csrf_token %}
+    {{ cyber_risk.as_p }}
+   <div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+    </div>
+</form>
+</div>
+</section>
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+		
+	}
+
+</style>

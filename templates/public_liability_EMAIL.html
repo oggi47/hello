@@ -1,0 +1,158 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bis_public_liability.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+
+
+</head>
+<h1>Public Liability </h1>
+
+<h4 class="orange_header">Particulars of Proposer</h4>
+	{% csrf_token %}
+
+
+	<div class="row">
+	<div class="col-8">  Name of Proposer/Name of Company:  {{ form.name_of_proposer}}	</div>
+	<div class="col-4">	Business Registration No:{{form.business_registration_no}}	</div>	
+	</div>
+
+
+	<div class="row">
+	<div class="col-8">  Mailing Address: {{ form.mailing_adress}}	</div>
+	<div class="col-4">Postal Number:	{{form.postal_number}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-8">  Email:  {{form.email}}	</div>
+	<div class="col-4">	Period of Insurance:{{form.period_of_insuarance}}	</div>	
+	</div>
+
+	<div >Nature of Business: {{ form.nature_of_business}}	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Details of Risk Premises</h4>
+
+	<div class="row">
+	<div class="col-8"> Address: {{form.risk_address}}	</div>
+	<div class="col-4">Postal Number:	{{form.risk_postal_code}}	</div>	
+	</div>
+
+	<div>Use of Premises: {{form.use_premise}}	</div>
+
+	<br>
+	<h4 class="orange_header">Turnover</h4>
+	<div> Annual turn over: {{form.annual_turn_over}}	</div>
+	<br>
+	<h4 class="orange_header">Limit of Indemnity</h4>
+	<br>
+	<h5>Please state the Limit of Indemnity required:</h5>
+
+
+	<div class="row">
+	<div class="col-8"> One occurence:  {{form.one_occurence}}	</div>
+	<div class="col-4">Any One Period of Insurance:
+	<br>Unlimited	</div>	
+	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Additional Information</h4>
+	<div>
+		a) Are any workers involved in manual works in connection withinstallation, erection, repair, maintenance, testing, demolition or construction outside Insured’s premises?<br>{{form.add_info_1}}<br>
+		b) Are any workers involved in works at height of more than 30 feet abovefloor or ground level?<br>{{form.add_info_2A}}<br>
+		If Yes, will there be any scaffolding works and/or other related activities?<br>{{form.add_info_2B}}<br>
+		c) Are any workers involved in works involving explosives, dangerous or toxic chemicals, e.g. chemicals that are under the Poison Act?<br>{{form.add_info_3}}<br>
+		d) Are any workers involved in excavation works, work in manholes or tunnels etc?<br>{{form.add_info_4}}<br>
+		e) Are any workers involved in using heavy industrial machines that involve cutting, pressing, grinding etc?<br>{{.add_info_5}}<br>
+		f) Are any workers involved in lifting or hoisting operations, especially in public areas?<br>{{form.add_info_6}}<br>
+		g) Are any workers required to work on-board vessels?<br>{{form.add_info_7A}}<br>
+		If Yes, what is the maximum no. of employees on-board any vessel any one time?<br>{{form.add_info_7B}}<br>
+		h) Will there be any diving and/or related underwater activities pertaining to your business?<br>{{form.add_info_8}}<br>
+		i) Does the building adjoin any other premises?<br>{{form.add_info_9A}}<br>
+		If Yes, please state its nature of business:<br>{{form.add_info_9B}}<br>
+		j) Is there any insurance in force covering the same exposure for the same period of insurance being proposed?<br>{{form.add_info_10A}}<br>
+		<div class="row">
+		<div class="col-8">   Name of Insurer: {{form.add_info_10B}}	</div>
+		<div class="col-4">	Limit of Indemnity: {{form.add_info_10C}}	</div>	
+		</div>
+		
+		<br>k) Has any Insurance Company ever refused your Public Liability Insurance Proposal or refused to renew your Public Liability Policy?<br>{{form.add_info_11}}<br>
+		l) Has your insurance been canceled solely or in part due to a breach of premium payment warranty in the last 12 months?<br>{{form.add_info_12}}<br>
+		
+
+	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Claims Experience</h4>
+	<br>
+	<h5>Please give particulars of claims that have been made against you (or are pending) during the last 5 years:</h5>
+
+
+	<table class="table table-bordered">
+  <tr>
+    <th>Date of Loss</th>
+    <th>Nature of Loss</th>
+    <th>Amount Claimed</th>
+  </tr>
+  <tr>
+    <td scope="col"><{{form.date_of_loss_1}}></td>
+    <td scope="col"><{{form.nature_of_loss_1}} ></td>
+    <td scope="col"><{{form.amt_claimed_1}} ></td>  
+  </tr>
+  <tr>
+    <td scope="col"><{{form.date_of_loss_2}} ></td>
+    <td scope="col"><{{form.nature_of_loss_2}} ></td>
+    <td scope="col"><{{form.amt_claimed_2}} ></td>  
+  </tr>
+  <tr>
+    <td scope="col"><{{form.date_of_loss_3}} ></td>
+    <td scope="col"><{{form.nature_of_loss_3}} ></td>
+    <td scope="col"><{{form.amt_claimed_3}} ></td>  
+  </tr>
+  <tr>
+   <td scope="col"><{{form.date_of_loss_4}} ></td>
+    <td scope="col"><{{form.nature_of_loss_4}} ></td>
+    <td scope="col"><{{form.amt_claimed_4}} ></td>  
+  </tr>
+   <tr>
+   <td scope="col"><{{form.date_of_loss_5}} ></td>
+    <td scope="col"><{{form.nature_of_loss_5}}></td>
+    <td scope="col"><{{form.amt_claimed_5}} ></td>  
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Details of Expiring Insurance</h4>
+	
+<div>Name of Insurer:{{form.name_of_insurer}}</div>
+
+<div class="row">
+	<div class="col-8"> Any One Occurrence: {{form.limit_of_indemnity_1_occurence}}	</div>
+	<div class="col-4"> Any One Period:{{form.limit_of_indemnity_any_occurence}}	</div>	
+	</div>
+
+<div class="row">
+  <div class="col-sm-4">Annual Premium:  {{form.annual_premium}}</div>
+  <div class="col-sm-4"> Excess: {{form.excess}}</div>
+  <div class="col-sm-4">  Expiry Date:{{form.expiry_date}}</div>
+</div>
+
+
+
+<div>Special Terms and Conditions:{{form.special_terms_conditions}}</div>
+
+<br>
+<h5>IMPORTANT NOTES</h5>
+<h6>• The liability of the Company does not commence until this Proposal has been accepted by the Company.</h6>
+<br>
+<h5>PAYMENT BEFORE COVER WARRANTY (INDIVIDUAL)</h5>
+<h6>Please note that the total premium must be paid and actually received in full by the Company (or the intermediary through whom this Policy was effected) on or before the inception date of the coverage, failing which the Policy shall be deemed to be automatically canceled and no benefits whatsoever shall be payable by the Company.</h6>
+<br>
+<h5>PREMIUM PAYMENT WARRANTY (CORPORATE)</h5>
+<h6>Please note that the total premium must be paid and actually received in full by the Company (or the intermediary through whom this Policy was effected) within 60 days of the inception date of the coverage, failing which the Policy shall be deemed to be automatically canceled and a pro-rata premium is to be charged for the period that the Company is on risk</h6>
+<br>

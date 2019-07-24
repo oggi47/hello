@@ -1,0 +1,200 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bisform3.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<section id="directors_and_officers_background">
+
+<div id="directors_and_officers_div">
+
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+	<a href="http://127.0.0.1:8000/business_oggi"><img id="close_dao" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+<h4 class="orange_header">Proposal Information</h4>
+
+	{% csrf_token %}
+   <div class="row">
+		<div class="col-8">    {{ directors_and_officers.name_of_proposer|as_crispy_field}}	</div>
+		<div class="col-4">	{{directors_and_officers.principle_adress|as_crispy_field}}	</div>	
+	</div>
+
+	<div class="row">
+		<div class="col-8">    {{ directors_and_officers.country_incorporation|as_crispy_field}}	</div>
+		<div class="col-4">	{{directors_and_officers.date_incorporation|as_crispy_field}}	</div>	
+	</div>
+
+<br><br><br>
+<h4 class="orange_header">Documents Required</h4>
+<p>Please submit the following documents with respect to the Proposer:
+<br>a) Latest annual report including audited financial statements with all notes.
+<br>b) Latest interim report subsequent to the latest annual report (and any extraordinary regulatory filings withinthe last 12 months).
+<br>c) Any offering prospectus issued by the Proposer (including any subsidiary thereof) if issued within the last 3years.
+<br>d) Any indemnification and limitation of liability provision for Insured Persons in the certificate of incorporation,corporate by-laws ormemorandum of association.
+<br>e) Copy of Proposer’s current primary Directors’ & Officers’ policy.
+<br>f) A list of all Proposer’s directors and their professional or business affiliations related to their current boardposition, unlessprovided in the annual report.</p>
+
+<br><br><br>
+<h4 class="orange_header">Stock Ownership of Proposer/Subsidiaries/Associated Companies</h4>
+
+<div >
+		<div >    {{ directors_and_officers.qns3_A|as_crispy_field}}	</div>
+		<div>	{{directors_and_officers.qns3_B|as_crispy_field}}	</div>	
+		<div >    {{ directors_and_officers.qns3_C|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns3_D|as_crispy_field}}	</div>	
+		<div >	{{directors_and_officers.qns3_E|as_crispy_field}}	</div>
+
+	</div>
+
+	<br><br><br>
+<h4 class="orange_header">General Information</h4>
+
+<div >
+		<div >    {{ directors_and_officers.qns4_A|as_crispy_field}}	</div>
+		<div>	{{directors_and_officers.qns4_B|as_crispy_field}}	</div>	
+		<div >    {{ directors_and_officers.qns4_C|as_crispy_field}}	</div>
+		<p>d) Has the Proposer or any subsidiary in the past 36 months completed or agreed to, or does it contemplate within the next 12months, any of the following:</p>
+		<div >	{{directors_and_officers.qns4_D1|as_crispy_field}}	</div>	
+		<div >	{{directors_and_officers.qns4_D2|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns4_D3|as_crispy_field}}	</div>
+		<table class="table-bordered" id="Table_A" >
+  <tr>
+    <th></th>
+    <th>Insurer</th>
+    <th>Limit</th>
+    <th>Retention</th>
+    <th>Premium</th>
+    <th>Policy Period</th>
+  </tr>
+  <tr>
+    <td>D&O Liability:</td>
+    <td><{{directors_and_officers.qns4_E1 }} ></td>
+    <td><{{directors_and_officers.qns4_E2}} ></td>
+    <td><{{directors_and_officers.qns4_E3 }} ></td>
+    <td><{{directors_and_officers.qns4_E4 }} ></td>
+    <td><{{directors_and_officers.qns4_E5 }}></td>
+  </tr>
+</table>
+	</div>
+	<br><br><br>
+	<h4 class="orange_header">Employment Practices Information</h4>
+	<div>
+	<div >    {{ directors_and_officers.qns5_A|as_crispy_field}}	</div>
+		<p>b) Total number of employee in the following locations</p>
+		<div>	{{directors_and_officers.qns5_B1|as_crispy_field}}	</div>	
+		<div >    {{ directors_and_officers.qns5_B2|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns5_C|as_crispy_field}}	</div>	
+		<p>d) Does the proposer or its subsidiaries anticipate any retrenchments or layoffs within the next 12 months?</p>
+		<div >	{{directors_and_officers.qns5_D|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns5_E0|as_crispy_field}}	</div>
+		<p>f) if YES, please tick the following relevant box(es) if the manual/handbook/guidelines contain a policy withrespect to, or a procedure for handling employee complaints concerning, the following:</p>
+		<br>
+		<p>POLICY PROCEDURE<br>YES/NO</p>
+		<div >	{{directors_and_officers.qns5_E1|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns5_E2|as_crispy_field}}	</div>
+	</div>
+	<br><br><br>
+	<h4 class="orange_header">Past Activities</h4>
+	<div>
+		<p>a) Has any person or entity proposed for this insurance been a party to any of the following</p>
+		<div >	{{directors_and_officers.qns6_A1|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns6_A2|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns6_A3|as_crispy_field}}	</div>
+		<div >	{{directors_and_officers.qns6_B|as_crispy_field}}	</div>
+		<p>Please attach full details of all enquiries, investigations or other administrative hearings, whether current orcompleted, before any agency or tribunal governing the responsibility of employers to their employees
+			<br>
+			c) After enquiry, we hereby certify, acknowledge and warrant that:<br>
+			(i)  There have been no claims made against any of the Insured Person(s), or the Company, which may cause affect under the proposedinsurance;
+			<br>(ii)  None of the Insured Person(s), the Company or proposed Insured Person(s) to the best of their knowledgeis aware of any facts, circumstances, situations, matters or events which may give rise to a claim under the proposed insurance; and
+			<br>(iii) There have been no material changes in the application(s), including all materials and information submitted
+				{{directors_and_officers.qns6_c|as_crispy_field}}	
+		</p>
+		
+
+
+	</div>
+
+     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LcCEa4UAAAAAPnW_2Wv5E_irJm-5c1jZ2yZFLHY"></div>
+   <div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+ </div>
+</form>
+</div>
+</section>
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+
+	}
+	#directors_and_officers_div
+	{
+		background-color:#fff;
+	padding:10%;
+	width:80%;
+	position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;
+	}
+
+input[type=text] {
+  width: 100%; 
+ 
+}
+section
+{
+	height:100vh;
+	width:100%;
+}
+#directors_and_officers_background
+{
+	background-color: #a7dfb8
+}
+
+
+#close_dao
+{
+	width:3.5%;
+	float:right;
+}
+#submit_button
+{
+	width:20%;
+	margin-top:10%;
+}
+.orange_header
+{
+	color:#fe6a00;
+}
+</style>

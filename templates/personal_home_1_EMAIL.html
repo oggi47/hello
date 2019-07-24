@@ -1,0 +1,61 @@
+<h4 class="orange_header">Particulars of Proposer</h4>
+	{% csrf_token %}
+	<div class="row">
+	<div class="col-8">Name of Proposer/Name of Company: 
+    {{ form.name_of_proposer}}
+	</div>
+	<div class="col-4">
+NRIC/FIN No.:
+	{{form.NRIC}}
+	</div>	
+</div>
+
+	<div class="row">
+	<div class="col-8">Mailing Address: 
+    {{ form.mailing_adress}}
+	</div>
+	<div class="col-4">Postal Number: 
+	{{form.postal_number}}
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-sm-4">Date of Birth:
+	 {{ form.dob}}
+	</div>
+	<div class="col-sm-4">Contact Number: 
+	 {{ form.contact_number}}
+	</div>
+	<div class="col-sm-4">Occupation:
+	 {{ form.occupation}}
+	</div>
+</div>
+
+<div class="col-sm-12" > Email: {{ form.email}}</div>
+
+   
+
+<br><br><br>
+<h4 class="orange_header">  Details of Premises </h4>
+
+<div class="row">
+	<div class="col-8">Address of Premises to be Insured:
+    {{ form.address_to_be_insured}}
+	</div>
+	<div class="col-4">Postal Number:
+	{{form.postal_code_to_be_insured}}
+	</div>	
+</div>
+<div class="col-sm-12" > Type of Premises:{{ form.type_of_premise}}</div>
+
+<div class="row">
+	<div class="col-8">Mortgagee (if to be Named in the Policy):
+    {{ form.mortgagee}}
+	</div>
+	<div class="col-4">
+Name of Landlord (if to be Named in the Policy):
+	{{form.name_of_landlord}}
+	</div>	
+</div>
+
+<div class="col-sm-12" >Is the Premises: {{ form.is_the_premise}}</div>

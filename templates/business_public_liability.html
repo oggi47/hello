@@ -1,0 +1,204 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bis_public_liability.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+  	
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+
+</head>
+<body>
+<section id="whole_background" >
+<div id="public_liability_div" >
+
+<form action="http://127.0.0.1:8000/business_public_liability/#" id="form" method="post" name="form">
+	<a href="http://127.0.0.1:8000/business_oggi"><img id="close_pl" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+	<h4 class="orange_header">Particulars of Proposer</h4>
+	{% csrf_token %}
+
+
+	<div class="row">
+	<div class="col-8">  {{ public_liability_form.name_of_proposer|as_crispy_field}}	</div>
+	<div class="col-4">	{{public_liability_form.business_registration_no|as_crispy_field}}	</div>	
+	</div>
+
+
+	<div class="row">
+	<div class="col-8">    {{ public_liability_form.mailing_adress|as_crispy_field}}	</div>
+	<div class="col-4">	{{public_liability_form.postal_number|as_crispy_field}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-4">    {{public_liability_form.email|as_crispy_field}}	</div>
+	<div class="col-4">	{{public_liability_form.period_of_insuarance_from|as_crispy_field}}	</div>	
+	<div class="col-4">	{{public_liability_form.period_of_insuarance_to|as_crispy_field}}	</div>	
+	</div>
+
+	<div > {{ public_liability_form.nature_of_business|as_crispy_field}}	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Details of Risk Premises</h4>
+
+	<div class="row">
+	<div class="col-8">  {{public_liability_form.risk_address|as_crispy_field}}	</div>
+	<div class="col-4">	{{public_liability_form.risk_postal_code|as_crispy_field}}	</div>	
+	</div>
+
+	<div> {{public_liability_form.use_premise|as_crispy_field}}	</div>
+
+	<br>
+	<h4 class="orange_header">Turnover</h4>
+	<div> {{public_liability_form.annual_turn_over|as_crispy_field}}	</div>
+	<br>
+	<h4 class="orange_header">Limit of Indemnity</h4>
+	<br>
+	<h5>Please state the Limit of Indemnity required:</h5>
+
+
+	<div class="row">
+	<div class="col-8">  {{public_liability_form.one_occurence|as_crispy_field}}	</div>
+	<div class="col-4">Any One Period of Insurance:
+	<br>Unlimited	</div>	
+	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Additional Information</h4>
+	<div>
+		{{public_liability_form.add_info_1|as_crispy_field}}
+		{{public_liability_form.add_info_2A|as_crispy_field}}
+		{{public_liability_form.add_info_2B|as_crispy_field}}
+		{{public_liability_form.add_info_3|as_crispy_field}}
+		{{public_liability_form.add_info_4|as_crispy_field}}
+		{{public_liability_form.add_info_5|as_crispy_field}}
+		{{public_liability_form.add_info_6|as_crispy_field}}
+		{{public_liability_form.add_info_7A|as_crispy_field}}
+		{{public_liability_form.add_info_7B|as_crispy_field}}
+		{{public_liability_form.add_info_8|as_crispy_field}}
+		{{public_liability_form.add_info_9A|as_crispy_field}}
+		{{public_liability_form.add_info_9B|as_crispy_field}}
+		{{public_liability_form.add_info_10A|as_crispy_field}}
+		<div class="row">
+		<div class="col-8">   {{public_liability_form.add_info_10B|as_crispy_field}}	</div>
+		<div class="col-4">	{{public_liability_form.add_info_10C|as_crispy_field}}	</div>	
+		</div>
+		
+		{{public_liability_form.add_info_11|as_crispy_field}}
+		{{public_liability_form.add_info_12|as_crispy_field}}
+		
+
+	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Claims Experience</h4>
+	<br>
+	<h5>Please give particulars of claims that have been made against you (or are pending) during the last 5 years:</h5>
+
+
+	<table class="table table-bordered">
+  <tr>
+    <th>Date of Loss</th>
+    <th>Nature of Loss</th>
+    <th>Amount Claimed</th>
+  </tr>
+  <tr>
+    <td scope="col">{{public_liability_form.date_of_loss_1}} </td>
+    <td scope="col">{{public_liability_form.nature_of_loss_1}} </td>
+    <td scope="col">{{public_liability_form.amt_claimed_1}}</td>  
+  </tr>
+  <tr>
+    <td scope="col">{{public_liability_form.date_of_loss_2}}</td>
+    <td scope="col">{{public_liability_form.nature_of_loss_2}}</td>
+    <td scope="col">{{public_liability_form.amt_claimed_2}}</td>  
+  </tr>
+  <tr>
+    <td scope="col">{{public_liability_form.date_of_loss_3}}</td>
+    <td scope="col">{{public_liability_form.nature_of_loss_3}} </td>
+    <td scope="col">{{public_liability_form.amt_claimed_3}} </td>  
+  </tr>
+  <tr>
+   <td scope="col">{{public_liability_form.date_of_loss_4}}</td>
+    <td scope="col">{{public_liability_form.nature_of_loss_4}}</td>
+    <td scope="col">{{public_liability_form.amt_claimed_4}}</td>  
+  </tr>
+   <tr>
+   <td scope="col">{{public_liability_form.date_of_loss_5}}</td>
+    <td scope="col">{{public_liability_form.nature_of_loss_5}}</td>
+    <td scope="col">{{public_liability_form.amt_claimed_5}} </td>  
+  </tr>
+</table>
+
+<br><br><br>
+<h4 class="orange_header">Details of Expiring Insurance</h4>
+	
+<div>{{public_liability_form.name_of_insurer|as_crispy_field}}</div>
+
+<div class="row">
+	<div class="col-8">  {{public_liability_form.limit_of_indemnity_1_occurence|as_crispy_field}}	</div>
+	<div class="col-4"> {{public_liability_form.limit_of_indemnity_any_occurence|as_crispy_field}}	</div>	
+	</div>
+
+<div class="row">
+  <div class="col-sm-4">  {{public_liability_form.annual_premium|as_crispy_field}}</div>
+  <div class="col-sm-4">  {{public_liability_form.excess|as_crispy_field}}</div>
+  <div class="col-sm-4">  {{public_liability_form.expiry_date|as_crispy_field}}</div>
+</div>
+
+
+
+<div>{{public_liability_form.special_terms_conditions|as_crispy_field}}</div>
+
+<br>
+<h5>IMPORTANT NOTES</h5>
+<h6>• The liability of the Company does not commence until this Proposal has been accepted by the Company.</h6>
+<br>
+<h5>PAYMENT BEFORE COVER WARRANTY (INDIVIDUAL)</h5>
+<h6>Please note that the total premium must be paid and actually received in full by the Company (or the intermediary through whom this Policy was effected) on or before the inception date of the coverage, failing which the Policy shall be deemed to be automatically canceled and no benefits whatsoever shall be payable by the Company.</h6>
+<br>
+<h5>PREMIUM PAYMENT WARRANTY (CORPORATE)</h5>
+<h6>Please note that the total premium must be paid and actually received in full by the Company (or the intermediary through whom this Policy was effected) within 60 days of the inception date of the coverage, failing which the Policy shall be deemed to be automatically canceled and a pro-rata premium is to be charged for the period that the Company is on risk</h6>
+<br>
+
+
+
+
+
+
+   <div class="form-actions">
+      <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+    </div>
+</form>
+</div>
+</section>
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+
+	}
+	section{
+		width:100%;
+		height:100vh;
+	}
+</style>

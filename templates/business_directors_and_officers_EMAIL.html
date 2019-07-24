@@ -1,0 +1,109 @@
+<h4 class="orange_header">Proposal Information</h4>
+
+	{% csrf_token %}
+   <div class="row">
+		<div class="col-8"> Name of Proposer/Name of Company:   {{ form.name_of_proposer}}	</div>
+		<div class="col-4">	Principle Address: {{form.principle_adress}}	</div>	
+	</div>
+
+	<div class="row">
+		<div class="col-8"> Country of incorporation:
+   {{ form.country_incorporation}}	</div>
+		<div class="col-4">	Date of incorporation or charter:{{form.date_incorporation}}	</div>	
+	</div>
+
+<br><br><br>
+<h4 class="orange_header">Documents Required</h4>
+<p>Please submit the following documents with respect to the Proposer:
+<br>a) Latest annual report including audited financial statements with all notes.
+<br>b) Latest interim report subsequent to the latest annual report (and any extraordinary regulatory filings withinthe last 12 months).
+<br>c) Any offering prospectus issued by the Proposer (including any subsidiary thereof) if issued within the last 3years.
+<br>d) Any indemnification and limitation of liability provision for Insured Persons in the certificate of incorporation,corporate by-laws ormemorandum of association.
+<br>e) Copy of Proposer’s current primary Directors’ & Officers’ policy.
+<br>f) A list of all Proposer’s directors and their professional or business affiliations related to their current boardposition, unlessprovided in the annual report.</p>
+
+<br><br><br>
+<h4 class="orange_header">Stock Ownership of Proposer/Subsidiaries/Associated Companies</h4>
+
+<div >
+		<div >a) Exchanges on which Proposer/Subsidiaries/Associated companies listed/traded<br>{{ form.qns3_A}}<br>	</div>
+		<div>b)Total number of authorisedcommon shares of the Proposer:<br>	{{form.qns3_B}}<br>	</div>	
+		<div > c) Total number of outstanding common shares of the Proposer: <br> {{form.qns3_C}}<br>	</div>
+		<div >d) Total number of common shareholders of the Proposer:<br>	{{form.qns3_D}}	<br></div>	
+		<div >e) Shareholders holding more than 5% of the Proposer’s outstanding common shares:<br>{{form.qns3_E}}<br>	</div>
+
+	</div>
+
+	<br><br><br>
+<h4 class="orange_header">General Information</h4>
+
+<div >
+		<div >  a) Since the latest annual or interim report, has the Proposer issued any dividend or profit warning to holders of company securities?<br>  {{ form.qns4_A}}<br>	</div>
+		<div>	b) Have there been any changes in the board of directors of the Proposer within the past three (3) years forreasons other thandeath or retirement?<br>{{form.qns4_B}}<br>	</div>	
+		<div >  c) Has the Proposer changed outside auditors in the last three (3) years?<br>  {{ form.qns4_C}}	<br></div>
+		<p>d) Has the Proposer or any subsidiary in the past 36 months completed or agreed to, or does it contemplate within the next 12months, any of the following:</p>
+		<div >i. Merger with, acquisition of or consolidation with another entity whose consolidated assets exceed 10% of the Proposer’sconsolidated assets<br>	{{form.qns4_D1}}<br></div>	
+		<div >ii. Sale, distribution or divestiture of any assets or equity other than in the ordinary course of business in anamount exceeding25% of the Proposer’s consolidated assets?<br>	{{form.qns4_D2}}<br>	</div>
+		<div >iii. Any registration for a public offering or any private placement of debt or equity securities?<br>	{{form.qns4_D3}}<br>	</div>
+		<table class="table-bordered" id="Table_A" >
+  <tr>
+    <th></th>
+    <th>Insurer</th>
+    <th>Limit</th>
+    <th>Retention</th>
+    <th>Premium</th>
+    <th>Policy Period</th>
+  </tr>
+  <tr>
+    <td>D&O Liability:</td>
+    <td>{{form.qns4_E1 }}</td>
+    <td>{{form.qns4_E2}}</td>
+    <td>{{form.qns4_E3 }}</td>
+    <td>{{form.qns4_E4 }}</td>
+    <td>{{form.qns4_E5 }}</td>
+  </tr>
+</table>
+	</div>
+	<br><br><br>
+	<h4 class="orange_header">Employment Practices Information</h4>
+	<div>
+	<div > a)Total number of employee worldwide (including full time, part time and casual):<br> {{ form.qns5_A}}<br>	</div>
+		<p>b) Total number of employee in the following locations</p>
+		<div>	USA/Canada: {{form.qns5_B1}}	</div>	
+		<div >  Australia:  {{form.qns5_B2}}	</div>
+		<div >	c) How many directors and/or employees left the proposer and/or its subsidiaries in the last 12 months: {{form.qns5_C}}	</div>	
+		<p>d) Does the proposer or its subsidiaries anticipate any retrenchments or layoffs within the next 12 months?</p>
+		<div >If yes, how many? <br>	{{form.qns5_D}}	</div>
+		<div >e) Does the proposer and its subsidiaries publish a written human resources manual, employee handbook or management guidelines?<br>	{{form.qns5_E0}}	<br></div>
+		<p>f) if YES, please tick the following relevant box(es) if the manual/handbook/guidelines contain a policy withrespect to, or a procedure for handling employee complaints concerning, the following:</p>
+		<br>
+		<p>POLICY PROCEDURE<br>YES/NO</p>
+		<div >if YES, please tick the following relevant box(es) if the manual/handbook/guidelines contain a policy withrespect to, or a procedure for handling employee complaints concerning, the following:
+
+<br>	{{form.qns5_E1}}<br>	</div>
+		<div >Please tick the following relevant box (es) if the policy/procedure is that decisions regarding the following aresubject to the prior consideration by the proposer’s human resources department, its in-house legal department or its external lawyer<br>	{{form.qns5_E2}}<br>	</div>
+	</div>
+	<br><br><br>
+	<h4 class="orange_header">Past Activities</h4>
+	<div>
+		<p>a) Has any person or entity proposed for this insurance been a party to any of the following</p>
+		<div >	Any antitrust, copyright, or patent litigation?<br>{{form.qns6_A1}}<br>	</div>
+		<div >	Any civil, criminal or administrative proceeding alleging or investigating a violation of any securitieslaw or regulations<br>{{form.qns6_A2}}	<br></div>
+		<div >Any representative actions, class actions or derivative suits?<br>	{{form.qns6_A3}}<br>	</div>
+		<div >No claims have been made against any person(s) or entity proposed for this insurance relating to employment practices (includingwrongful termination, discrimination, intimidation or harassment)? (include loss payment and defencecosts):<br>	{{form.qns6_B}}<br>	</div>
+		<p>Please attach full details of all enquiries, investigations or other administrative hearings, whether current orcompleted, before any agency or tribunal governing the responsibility of employers to their employees
+			<br>
+			c) After enquiry, we hereby certify, acknowledge and warrant that:<br>
+			(i)  There have been no claims made against any of the Insured Person(s), or the Company, which may cause affect under the proposedinsurance;
+			<br>(ii)  None of the Insured Person(s), the Company or proposed Insured Person(s) to the best of their knowledgeis aware of any facts, circumstances, situations, matters or events which may give rise to a claim under the proposed insurance; and
+			<br>(iii) There have been no material changes in the application(s), including all materials and information submitted<br>
+				{{form.qns6_c}}	
+		</p>
+		
+
+
+	</div>
+
+
+
+

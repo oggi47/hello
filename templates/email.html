@@ -1,0 +1,129 @@
+{%load static%}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/popup7.css'%}">
+<link rel="stylesheet" type="text/js" href="{%static 'js/popupform2.js'%}">
+<script type="text/javascript" src="{% static 'js/popupform2.js' %}"></script>
+<script type="text/css" src="{% static 'css/popup7.css' %}"></script>
+</head>
+
+
+</head>
+<section id=business_bg >
+<!-- Body Starts Here -->
+<body id="body" >
+
+
+<div id="abc2"  style="display:none;">
+<div id="popupContact2">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide2()">
+	{% csrf_token %}
+    {{ travel_form.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+<div id="abc3"  style="display:none;">
+<div id="popupContact3">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide3()">
+	{% csrf_token %}
+    {{working_injury_compensation.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+
+<div id="abc4"  style="display:none;">
+<div id="popupContact4">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide4()">
+	{% csrf_token %}
+    {{property_all_risks.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+
+<div id="abc5"  style="display:none;">
+<div id="popupContact5">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide5()">
+	{% csrf_token %}
+    {{directors_and_officers.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+
+<div id="abc6"  style="display:none;">
+<div id="popupContact6">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide6()">
+	{% csrf_token %}
+    {{foreign_worker_medical.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+
+<div id="abc7"  style="display:none;background-color:green;">
+<div id="popupContact7">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png" onclick ="div_hide7()">
+	{% csrf_token %}
+    {{security_bond.as_p }}
+   <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</div>
+
+
+<!-- Display Popup Button -->
+ <p id=business_para>
+
+<a href="http://127.0.0.1:8000/business_travel/#"><img id=form1 src="https://live.staticflickr.com/65535/48118934673_97e121343d_o.png"></a>
+
+
+<input  id="form2" 
+       src="https://live.staticflickr.com/65535/48118934673_97e121343d_o.png" onclick="div_show2()">
+
+<input type="image" id="form3" 
+       src="https://live.staticflickr.com/65535/48118934768_0cc74d8fe8_o.png" onclick="div_show3()">
+
+<input type="image" id="form4" 
+       src="https://live.staticflickr.com/65535/48118934783_ed0fb6e20d_o.png" onclick="div_show4()">   
+
+<input type="image" id="form5" 
+       src="https://live.staticflickr.com/65535/48118902501_14c58014a0_o.png" onclick="div_show5()">
+
+<input type="image" id="form6" 
+       src="https://live.staticflickr.com/65535/48118902551_b73d280dfc_o.png" onclick="div_show6()">
+
+<input type="image" id="form7" 
+       src="https://live.staticflickr.com/65535/48118902601_5df7a94397_o.png" onclick="div_show7()">
+ </p>
+</body>
+</section>
+</html>
+
+

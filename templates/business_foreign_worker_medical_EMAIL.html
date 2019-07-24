@@ -1,0 +1,109 @@
+	<h4 class="orange_header">Particulars of Proposer/Company</h4>
+	{% csrf_token %}
+<div class="row">
+	<div class="col-8">  Name of Proposer/Name of Company:  {{form.name_of_proposer}}	</div>
+	<div class="col-4">	Business Registration No:{{form.business_registration_no}}	</div>	
+</div>
+
+<div class="row">
+	<div class="col-8">   Mailing Address: {{ form.mailing_adress}}	</div>
+	<div class="col-4">	Postal Number:{{form.postal_number}}	</div>	
+</div>
+
+<div class="row">
+	<div class="col-8">  Email:  {{ form.email}}	</div>
+	<div class="col-4">	Phone number:{{form.phone_Number}}	</div>	
+</div>
+
+<div class="row">
+	<div class="col-8"> No. of Years in Business: {{ form.no_of_years_business}}	</div>
+	<div class="col-4">Period of Insurance:	{{form.period_of_insuarance}}	</div>	
+</div>
+
+<br>
+<h4 class="orange_header">Selection of Plan</h4>
+
+<div class="row">
+	<div class="col-12" > Plan Select: {{ form.plan_x}}	</div>	
+</div>
+
+<div class="row">
+  <div class="col-sm-4">Annual Premium per Foreign Worker: {{ form.annual_premium_foreign}}</div>
+  <div class="col-sm-4">No. of Foreign Workers : {{ form.no_foreign}}</div>
+  <div class="col-sm-4">Total Annual Premium excluding prevailing GST (7%): {{ form.total_annum_premium}}</div>
+</div>
+<br><br>
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name of Foreign Workers</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Work Permit No.</th>
+      <th scope="col">S Pass No./
+FIN No.</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><input type="text" name="{foreign_worker_medical.foreign_worker1 }" ></th>
+      <td>{{form.gender1 }} ></td>
+      <td>{{form.dob1 }} ></td>
+      <td>{{form.work_permit1 }} ></td>
+      <td>{{form.singpass1 }} ></td>
+      
+    </tr>
+    <tr>
+       <th scope="row">{{form.foreign_worker2 }} ></th>
+      <td>{{form.gender2 }} ></td>
+      <td>{{form.dob2 }} ></td>
+      <td>{{form.work_permit2 }} ></td>
+      <td>{{form.singpass2 }} ></td>
+    </tr>
+    <tr>
+       <th scope="row">{{form.foreign_worker3 }} ></th>
+      <td>{{form.gender3 }} ></td>
+      <td>{{form.dob3 }} ></td>
+      <td>{{form.work_permit3 }} ></td>
+      <td>{{form.singpass3 }}></td>
+    </tr>
+    <tr>
+    	 <th scope="row">{{form.foreign_worker4 }}></th>
+      <td>{form.gender4 }} ></td>
+      <td>{{form.dob4 }} ></td>
+      <td>{{form.work_permit4 }} ></td>
+      <td>{{form.singpass4 }} ></td>
+    </tr>
+    <tr>
+    	 <th scope="row">{{form.foreign_worker5 }} ></th>
+      <td>{{form.gender5}} ></td>
+      <td>{{form.dob5 }} ></td>
+      <td>{{form.work_permit5 }} ></td>
+      <td>{{form.singpass5 }} ></td>
+    </tr>
+    <tr>
+    	 <th scope="row">{{form.foreign_worker6 }} ></th>
+      <td>{{form.gender6 }} ></td>
+      <td>{{form.dob6 }} ></td>
+      <td>{{form.work_permit6 }} ></td>
+      <td>{{form.singpass6 }} ></td>
+    </tr>
+    <tr>
+    	<th scope="row">{{form.foreign_worker7 }}></th>
+      <td>{{form.gender7}} ></td>
+      <td>{{form.dob7 }} ></td>
+      <td>{{form.work_permit7}} ></td>
+      <td>{{form.singpass7 }} ></td>
+    </tr>
+    <tr>
+    	<th scope="row">{{form.foreign_worker8 }} ></th>
+      <td>{{form.gender8 }} ></td>
+      <td>{{form.dob8 }} ></td>
+      <td>{{form.work_permit8 }} ></td>
+      <td>{{form.singpass8 }} ></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,326 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bisform3.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body >
+<section id=travel_background >
+<div id=travel_div>
+<!-- Contact Us Form -->
+<form action="#" id="form" method="POST" name="form">
+<a href="http://127.0.0.1:8000/business_oggi"><img id="close_t" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+
+
+  {% csrf_token %}
+   
+  <h4 class="orange_header">Particulars of Proposer</h4>
+    
+   
+
+    <div class="row">
+  <div class="col-12">    {{ travel_form.name_of_company|as_crispy_field}}  </div>  
+  </div>
+   <div class="row">
+  <div class="col-12">    {{ travel_form.address|as_crispy_field}}  </div>  
+  </div>
+     <div class="row">
+  <div class="col-4">    {{ travel_form.tele_no|as_crispy_field}} </div>
+  <div class="col-4" >  {{travel_form.fax_no|as_crispy_field}}  </div>  
+  </div>
+  <div class="row">
+  <div class="col-12">    {{ travel_form.nature_of_business|as_crispy_field}} </div>  
+  </div>
+  <div class="row">
+  <div class="col-4">    {{ travel_form.name_authorised_repre|as_crispy_field}} </div>
+  <div class="col-4">    {{ travel_form.email|as_crispy_field}} </div>
+  </div>
+  <br><br>
+  <h4 class="orange_header">Risk Details</h4>
+  <div class="row">
+  
+  </div>
+  <br>
+  <h6>Named basis (Minimum 2 employees)</h6>
+  <table class="table table-bordered">
+  <tr>
+    <th>Name of Employee</th>
+    <th>Nationality</th>
+    <th>NRIC/FIN.</th>
+    <th>Country of Residence</th>
+    <th>Date of Birth</th>
+    <th>Plan</th>
+    <th>Regional or Global</th>
+    <th>Premium(S$)</th>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_1A}}</td>
+    <td>{{travel_form.nationality_1A}} </td>
+    <td>{{travel_form.nric_1A}} </td>
+    <td>{{travel_form.country_residence_1A}} </td>
+    <td>{{travel_form.dob_1A}}</td>
+    <td>{{travel_form.plan_1A}} </td>
+    <td>{{travel_form.region_1A}} </td>
+    <td>{{travel_form.premium_1A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_2A}}</td>
+    <td>{{travel_form.nationality_2A}} </td>
+    <td>{{travel_form.nric_2A}} </td>
+    <td>{{travel_form.country_residence_2A}} </td>
+    <td>{{travel_form.dob_2A}}</td>
+    <td>{{travel_form.plan_2A}} </td>
+    <td>{{travel_form.region_2A}} </td>
+    <td>{{travel_form.premium_2A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_3A}}</td>
+    <td>{{travel_form.nationality_3A}} </td>
+    <td>{{travel_form.nric_3A}} </td>
+    <td>{{travel_form.country_residence_3A}} </td>
+    <td >{{travel_form.dob_3A}}</td>
+    <td>{{travel_form.plan_3A}} </td>
+    <td>{{travel_form.region_3A}} </td>
+    <td>{{travel_form.premium_3A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_4A}}</td>
+    <td>{{travel_form.nationality_4A}} </td>
+    <td>{{travel_form.nric_4A}} </td>
+    <td>{{travel_form.country_residence_4A}} </td>
+    <td>{{travel_form.dob_4A}}</td>
+    <td>{{travel_form.plan_4A}} </td>
+    <td>{{travel_form.region_4A}} </td>
+    <td>{{travel_form.premium_4A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_5A}}</td>
+    <td>{{travel_form.nationality_5A}} </td>
+    <td>{{travel_form.nric_5A}} </td>
+    <td>{{travel_form.country_residence_5A}} </td>
+    <td>{{travel_form.dob_5A}}</td>
+    <td>{{travel_form.plan_5A}} </td>
+    <td>{{travel_form.region_5A}} </td>
+    <td>{{travel_form.premium_5A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_6A}}</td>
+    <td>{{travel_form.nationality_6A}} </td>
+    <td>{{travel_form.nric_6A}} </td>
+    <td>{{travel_form.country_residence_6A}} </td>
+    <td>{{travel_form.dob_6A}}</td>
+    <td>{{travel_form.plan_6A}} </td>
+    <td>{{travel_form.region_6A}} </td>
+    <td>{{travel_form.premium_6A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_7A}}</td>
+    <td>{{travel_form.nationality_7A}} </td>
+    <td>{{travel_form.nric_7A}} </td>
+    <td>{{travel_form.country_residence_7A}} </td>
+    <td>{{travel_form.dob_7A}}</td>
+    <td>{{travel_form.plan_7A}} </td>
+    <td>{{travel_form.region_7A}} </td>
+    <td>{{travel_form.premium_7A}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.name_employee_8A}}</td>
+    <td>{{travel_form.nationality_8A}} </td>
+    <td>{{travel_form.nric_8A}} </td>
+    <td>{{travel_form.country_residence_8A}} </td>
+    <td>{{travel_form.dob_8A}}</td>
+    <td>{{travel_form.plan_8A}} </td>
+    <td>{{travel_form.region_8A}} </td>
+    <td>{{travel_form.premium_8A}}</td>
+  </tr>
+  <tr>
+   <td>{{travel_form.name_employee_9A}}</td>
+    <td>{{travel_form.nationality_9A}} </td>
+    <td>{{travel_form.nric_9A}} </td>
+    <td>{{travel_form.country_residence_9A}} </td>
+    <td>{{travel_form.dob_9A}}</td>
+    <td>{{travel_form.plan_9A}} </td>
+    <td>{{travel_form.region_9A}} </td>
+    <td>{{travel_form.premium_9A}}</td>
+  </tr>
+  <tr>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;"></td>
+    <td style="border-color:transparent;">TOTAL PREMIUM (GST not required)</td>
+    <td style="border-color:transparent;">{{travel_form.total_premium_A}}</td>
+  </tr>
+</table>
+
+<br><br>
+<h6>Unnamed basis (Minimum 5 employees)</h6>
+
+<table  class="table table-bordered">
+  <tr>
+    <th>Category of Employees</th>
+    <th>No of Employees</th>
+    <th>Plan</th>
+    <th>Regional or Global</th>
+    <th>Premium(S$)</th>
+  </tr>
+  <tr>
+    <td>{{travel_form.cat_employee_1B}}</td>
+    <td>{{travel_form.no_employee_1B}}</td>
+    <td>{{travel_form.plan_1B}}</td>
+    <td>{{travel_form.region_1B}}</td>
+    <td>{{travel_form.premium_1B}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.cat_employee_2B}}</td>
+    <td>{{travel_form.no_employee_2B}}</td>
+    <td>{{travel_form.plan_2B}}</td>
+    <td>{{travel_form.region_2B}}</td>
+    <td>{{travel_form.premium_2B}}</td>
+  </tr>
+  <tr>
+   <td>{{travel_form.cat_employee_3B}}</td>
+    <td>{{travel_form.no_employee_3B}}</td>
+    <td>{{travel_form.plan_3B}}</td>
+    <td>{{travel_form.region_3B}}</td>
+    <td>{{travel_form.premium_3B}}</td>
+  </tr>
+  <tr>
+    <td>{{travel_form.cat_employee_4B}}</td>
+    <td>{{travel_form.no_employee_4B}}</td>
+    <td>{{travel_form.plan_4B}}</td>
+    <td>{{travel_form.region_4B}}</td>
+    <td>{{travel_form.premium_4B}}</td>
+  </tr>
+  <tr>
+     <td>{{travel_form.cat_employee_5B}}</td>
+    <td>{{travel_form.no_employee_5B}}</td>
+    <td>{{travel_form.plan_5B}}</td>
+    <td>{{travel_form.region_5B}}</td>
+    <td>{{travel_form.premium_5B}}</td>
+  </tr>
+  <tr>
+    <td  style="border-color:transparent;"></td>
+    <td  style="border-color:transparent;"></td>
+    <td  style="border-color:transparent;"></td>
+    <td  style="border-color:transparent;">TOTAL PREMIUM (GST not required)</td>
+    <td  style="border-color:transparent;">{{travel_form.total_premium_B}}</td>
+  </tr>
+</table>
+
+<br><br>
+<h4 class="orange_header">Claims Experience in the Last 3 Years</h4>
+<table class="table table-bordered">
+  <tr>
+    <th>Policy Year</th>
+    <th>No. of Claims</th>
+    <th>Total Claim Amount(S$)</th>
+  </tr>
+  <tr>
+    <td>{{travel_form.policy_year_C1}}</td>
+    <td>{{travel_form.no_claims_C1}}</td>
+    <td>{{travel_form.total_claim_amt_C1}}</td>
+  </tr>
+  <tr>
+   <td>{{travel_form.policy_year_C2}}</td>
+    <td>{{travel_form.no_claims_C2}}</td>
+    <td>{{travel_form.total_claim_amt_C2}}</td>
+  </tr>
+  <tr>
+   <td>{{travel_form.policy_year_C3}}</td>
+    <td>{{travel_form.no_claims_C3}}</td>
+    <td>{{travel_form.total_claim_amt_C3}}</td>
+  </tr>
+</table>
+<br><br>
+<h4 class="orange_header">Other Information</h4>
+<p>Please provide details, where relevant:
+<br>• No. of employees based outside of Singapore and countries based in;
+<br>• No. of employees working on board vessels, oil rigs and/or involved in manual work.</p>
+
+<div class="row">
+  <div class="col-12">    {{ travel_form.other_information|as_crispy_field}}  </div>  
+  </div>
+
+
+   <div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+    </div>
+</form>
+</div>
+</section>
+</body>
+</html>
+<style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  #form
+  {
+    font-family: 'Source Sans Pro', sans-serif;
+
+  }
+  section
+  {
+    width:100%;
+    height:100vh;
+  }
+  #travel_div
+{
+  background-color:#fff;
+  padding:10%;
+  width:95%;
+  position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;
+}
+#travel_background
+{
+  background-color: #a7dfb8
+}
+input[type=text] {
+  width: 100%;  
+}
+#close_t
+{
+  width:3.5%;
+  float:right;
+}
+#submit_button
+{
+  width:20%;
+  margin-top:10%;
+}
+.orange_header
+{
+  color:#fe6a00;
+}
+</style>
+

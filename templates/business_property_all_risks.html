@@ -1,0 +1,290 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{%static 'css/bisform3.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'js/bootstrap.min.js' %} "rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<section id="property_all_risks_background">
+<div id="property_all_risks_div">
+
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+	<a href="http://127.0.0.1:8000/business_oggi"><img id="close_pal" src="https://live.staticflickr.com/65535/48125557188_aa3e0862c5_o.png"></a>
+	{% csrf_token %}
+	<div class="row">
+	<div class="col-8">    {{  property_all_risks.name_of_proposer|as_crispy_field}}	</div>
+	<div class="col-4">	{{ property_all_risks.business_registration_no|as_crispy_field}}	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-8">    {{  property_all_risks.mailing_adress|as_crispy_field}}	</div>
+	<div class="col-4">	{{ property_all_risks.postal_number|as_crispy_field}}	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8">    {{  property_all_risks.email|as_crispy_field}}	</div>
+	<div class="col-4">	{{ property_all_risks.phone_Number|as_crispy_field}}	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-4">    {{  property_all_risks.period_of_insuarance_from|as_crispy_field}}	</div>
+	<div class="col-4">    {{  property_all_risks.period_of_insuarance_to|as_crispy_field}}	</div>
+	<div class="col-4">	{{ property_all_risks.no_of_years_business|as_crispy_field}}	</div>
+	</div>
+	<div>	{{ property_all_risks.mortgagee|as_crispy_field}}</div>
+	<div>	{{ property_all_risks.nature_of_business|as_crispy_field}}</div>
+	<br><br><br>
+	<h4 class="orange_header">Details of Risk Premises</h4>
+	<div class="row">
+	<div class="col-8">    {{  property_all_risks.risk_adress|as_crispy_field}}	</div>
+	<div class="col-4">	{{ property_all_risks.risk_postal_number|as_crispy_field}}	</div>
+	</div>
+	<br>
+
+	<div class="row">
+	
+	<div class="col-3">	{{ property_all_risks.use_of_premise_qns1|as_crispy_field}}</div>
+	<div class="col-3">	{{ property_all_risks.use_of_premise_qns2A|as_crispy_field}}</div>
+	<div class="col-3">	{{ property_all_risks.use_of_premise_qns2B|as_crispy_field}}</div>
+	<div class="col-3">	{{ property_all_risks.use_of_premise_qns2C|as_crispy_field}}</div>
+	</div>
+
+	<div class="row">
+	<h4 class="orange_header">Fire Fighting Appliances</h4>
+	</div>
+
+	<div class="row">
+	<div class="col-4">    {{  property_all_risks.fire_alarm_yesno|as_crispy_field}}	</div>
+	<div class="col-8">	{{ property_all_risks.fire_alarm|as_crispy_field}}	</div>
+	</div>
+	
+	
+	
+	<div class="row">
+	<div class="col-4">    {{  property_all_risks.fire_fighting_appliance_2A|as_crispy_field}}	</div>
+	<div class="col-8">	{{ property_all_risks.fire_fighting_appliance_2B|as_crispy_field}}	</div>
+	</div>
+
+	
+	<div >  {{  property_all_risks.fire_fighting_appliance_3|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.fire_fighting_appliance_4|as_crispy_field}}	</div>
+	
+	<div class="row">
+	<div class="col-4">    {{  property_all_risks.fire_fighting_appliance_5A|as_crispy_field}}	</div>
+	<div class="col-8">	{{ property_all_risks.fire_fighting_appliance_5B|as_crispy_field}}	</div>
+	</div>
+	<div >  {{  property_all_risks.fire_fighting_appliance_6|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.fire_fighting_appliance_7|as_crispy_field}}	</div>
+	
+	<div>	{{ property_all_risks.fire_fighting_appliance_8|as_crispy_field}}	</div>
+	
+	<div>	{{ property_all_risks.fire_fighting_appliance_9|as_crispy_field}}	</div>
+	
+
+	<h4 class="orange_header">Security Systems of Premises</h4>
+	<div>	{{ property_all_risks.security_system_1|as_crispy_field}}	</div>
+	
+	<div>	{{ property_all_risks.security_system_2A|as_crispy_field}}	</div>
+	<div class="row">
+	<div class="col-4">    {{  property_all_risks.security_system_2B|as_crispy_field}}	</div>
+	<div class="col-8">	{{ property_all_risks.security_system_2C|as_crispy_field}}	</div>
+	</div>
+
+
+	<div>	{{ property_all_risks.security_system_3|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.security_system_4|as_crispy_field}}	</div>	
+	<div>	{{ property_all_risks.security_system_5|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.security_system_6|as_crispy_field}}	</div>
+
+	<h4 class="orange_header">Property to be Insured</h4>
+	<div class="row">
+	<div class="col-8">    Interests	</div>
+	<div class="col-4">	Sum Insured	</div>
+	</div>
+
+
+	<div>	{{ property_all_risks.property_to_b_insured_1|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.property_to_b_insured_2|as_crispy_field}}	</div>
+	<div>	{{ property_all_risks.property_to_b_insured_3|as_crispy_field}}	</div>
+
+	<div class="row">
+	<div class="col-8">   {{ property_all_risks.property_to_b_insured_4A|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.property_to_b_insured_4B|as_crispy_field}}		</div>
+	</div>
+
+	<div>	{{ property_all_risks.property_to_b_insured_5|as_crispy_field}}	</div>
+
+	<br><br><br>
+	<h4 class="orange_header">Property to be Insured</h4>
+	<div class="row">
+	<div class="col-8">    Interests	</div>
+	<div class="col-4">	Sum Insured	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8">   {{ property_all_risks.property_to_b_insured_6A|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.property_to_b_insured_6B|as_crispy_field}}		</div>
+	</div>
+
+	<div class="row">
+	<div class="col-8">   {{ property_all_risks.property_to_b_insured_7A|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.property_to_b_insured_7B|as_crispy_field}}		</div>
+	</div>
+	<div>	{{ property_all_risks.property_to_b_insured_7C|as_crispy_field}}	</div>
+	<br><br>
+	<h4 class="orange_header">Cover Required</h4>
+
+	<h6>Please provide full details of all losses for the last 5 years:</h6>
+	<table  class="table table-bordered">
+  <tr>
+    <th>Date of Loss</th>
+    <th>Nature of Loss</th>
+    <th>Amount Claimed</th>
+  </tr>
+  <tr>
+    <td>{{ property_all_risks.claim_exp_dol_1}}</td>
+    <td>{{ property_all_risks.claim_exp_nol_1}}</td>
+    <td>{{property_all_risks.claim_exp_amt_1}}</td>
+  </tr>
+  <tr>
+    <td>{{ property_all_risks.claim_exp_dol_2}} </td>
+    <td>{{ property_all_risks.claim_exp_nol_2}} </td>
+    <td>{{ property_all_risks.claim_exp_amt_2}} </td>
+  </tr>
+  <tr>
+    <td>{{ property_all_risks.claim_exp_dol_3}} </td>
+    <td>{{ property_all_risks.claim_exp_nol_3}}</td>
+    <td>{{ property_all_risks.claim_exp_amt_3}} </td>
+  </tr>
+  <tr>
+   <td>{{ property_all_risks.claim_exp_dol_4}} </td>
+    <td>{{ property_all_risks.claim_exp_nol_4}} </td>
+    <td>{{ property_all_risks.claim_exp_amt_4}}</td>
+  </tr>
+  <tr>
+    <td>{{ property_all_risks.claim_exp_dol_5}}</td>
+    <td>{{ property_all_risks.claim_exp_nol_5}}</td>
+    <td>{{ property_all_risks.claim_exp_amt_5}}</td>
+  </tr>
+</table>
+<br><br>
+<h4 class="orange_header">Other Information</h4>
+
+<div class="row">
+	<div class="col-4">   {{ property_all_risks.other_info_1A|as_crispy_field}}		</div>
+	<div class="col-8">	{{ property_all_risks.other_info_1B|as_crispy_field}}		</div>
+	</div>	
+<div class="row">
+	<div class="col-4">   {{ property_all_risks.other_info_2A|as_crispy_field}}		</div>
+	<div class="col-8">	{{ property_all_risks.other_info_2B|as_crispy_field}}		</div>
+	</div>	
+
+<div class="row">
+	<div class="col-4">   {{ property_all_risks.other_info_3A|as_crispy_field}}		</div>
+	<div class="col-8">	{{ property_all_risks.other_info_3B|as_crispy_field}}		</div>
+	</div>	
+
+<div>	{{ property_all_risks.other_info_4A|as_crispy_field}}	</div>
+<div class="row">
+	<div class="col-4">   {{ property_all_risks.other_info_4B|as_crispy_field}}		</div>
+	<div class="col-8">	{{ property_all_risks.other_info_4C|as_crispy_field}}		</div>
+	</div>	
+
+<div>	{{ property_all_risks.other_info_5|as_crispy_field}}	</div>
+<div>	{{ property_all_risks.other_info_6|as_crispy_field}}	</div>
+
+
+<h4 class="orange_header">Details of Expiring Insurance</h4>
+<div class="row">
+	<div class="col-8">   {{ property_all_risks.name_of_insurer|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.sum_insured|as_crispy_field}}		</div>
+	</div>	
+
+<div class="row">
+	<div class="col-4">   {{ property_all_risks.annual_premium|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.date_of_expiry|as_crispy_field}}		</div>
+	<div class="col-4">	{{ property_all_risks.excess|as_crispy_field}}		</div>
+	</div>	
+
+<div>	{{ property_all_risks.special_terms_conditions|as_crispy_field}}	</div>
+
+
+   
+   <div class="form-actions">
+     <input id="submit_button" type="image" value="submit" src="https://live.staticflickr.com/65535/48136490811_a1f4180cd3_o.png" alt="submit Button" >
+    </div>
+
+</form>
+</div>
+</section>
+</body>
+</html>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	#form
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+
+	}
+	#property_all_risks_div
+	{
+
+		background-color:#fff;
+	padding:10%;
+	width:80%;
+	position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:20px; bottom:0;
+        margin:auto;
+        overflow: hidden;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:scroll;
+
+    overflow-x: hidden;}
+    #property_all_risks_background
+    {
+    	background-color: #a7dfb8
+    }
+    section
+    {
+    	width:100%;
+    	height:100vh;
+    }
+   
+   .orange_header
+   {
+   	color:#fe6a00;
+   }
+   #close_pal
+   {
+   	width:3.5%;
+   	float:right;
+   }
+   #submit_button
+{
+	width:20%;
+	margin-top:10%;
+}
+</style>
